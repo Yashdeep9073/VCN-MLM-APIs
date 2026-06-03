@@ -1,0 +1,29 @@
+info:
+  name: Create Loyalty tier
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}loyalty-tier/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"minTurnover\": 35000,\r
+
+      \  \"maxTurnover\": null,\r
+
+      \  \"percentage\": 25\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

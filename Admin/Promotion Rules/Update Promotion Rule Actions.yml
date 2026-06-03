@@ -1,0 +1,41 @@
+info:
+  name: Update Promotion Rule Actions
+  type: http
+  seq: 9
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}promotion-rule/update/actions"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"ruleId\": 1,\r
+
+      \    \"actions\": [\r
+
+      \        {\r
+
+      \            \"type\": \"PLACEMENT\",\r
+
+      \            \"config\": {\r
+
+      \                \"enabled\": true\r
+
+      \            }\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

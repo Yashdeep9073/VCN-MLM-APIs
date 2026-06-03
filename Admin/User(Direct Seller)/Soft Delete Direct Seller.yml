@@ -1,0 +1,18 @@
+info:
+  name: Soft Delete Direct Seller
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}users/direct-seller/delete/soft/123"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

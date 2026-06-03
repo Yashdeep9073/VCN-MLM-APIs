@@ -1,0 +1,18 @@
+info:
+  name: Team Overview
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{LOCAL_USER_URL}}dashboard/read/team-overview"
+  headers:
+    - name: Authorization
+      value: "{{USER_TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

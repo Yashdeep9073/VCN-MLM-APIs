@@ -1,0 +1,18 @@
+info:
+  name: Soft Delete Promotion Rules
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}promotions/delete/soft/7"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

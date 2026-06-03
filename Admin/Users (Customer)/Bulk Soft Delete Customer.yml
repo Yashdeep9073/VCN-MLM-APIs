@@ -1,0 +1,29 @@
+info:
+  name: Bulk Soft Delete Customer
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}users/customer/delete/soft/bulk"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"customerIds\": [\r
+
+      \        34\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

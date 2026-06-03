@@ -1,0 +1,7 @@
+info:
+  name: Payout Preferences
+  type: folder
+  seq: 30
+
+request:
+  auth: inherit

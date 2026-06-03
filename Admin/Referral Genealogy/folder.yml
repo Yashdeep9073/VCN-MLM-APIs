@@ -1,0 +1,7 @@
+info:
+  name: Referral Genealogy
+  type: folder
+  seq: 23
+
+request:
+  auth: inherit

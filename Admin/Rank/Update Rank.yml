@@ -1,0 +1,37 @@
+info:
+  name: Update Rank
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}rank/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"id\": 1,\r
+
+      \  \"name\": \"Updated Silver Rank\",\r
+
+      \  \"requiredRP\": 2000,\r
+
+      \  \"priority\": 2,\r
+
+      \  \"badgeImageId\": 1,\r
+
+      \  \"isActive\": true\r
+
+      }\r
+
+      \r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

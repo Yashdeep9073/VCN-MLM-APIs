@@ -1,0 +1,21 @@
+info:
+  name: Soft Delete Products Bulk
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}products/delete/soft/bulk"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r\n    \"productIds\":[1,2]\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

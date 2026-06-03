@@ -1,0 +1,7 @@
+info:
+  name: P2P Transfers
+  type: folder
+  seq: 31
+
+request:
+  auth: inherit

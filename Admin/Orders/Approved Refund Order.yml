@@ -1,0 +1,29 @@
+info:
+  name: Approved Refund Order
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}orders/update/refund/approval"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"refundRequestId\": 2,\r
+
+      \  \"orderId\": 2,\r
+
+      \  \"refundReason\": \"Customer requested cancellation within refund window\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

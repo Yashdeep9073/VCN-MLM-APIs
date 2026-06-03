@@ -1,0 +1,49 @@
+info:
+  name: Create Promotion Eligibility
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}promotion-eligibility/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"userId\": 2,\r
+
+      \  \"ruleId\": 1,\r
+
+      \  \"eligibleAt\": \"2026-03-18T10:30:00.000Z\",\r
+
+      \  \"expiryAt\": \"2026-05-02T10:30:00.000Z\",\r
+
+      \  \"membershipTo\": \"PREFERRED_CUSTOMER\",\r
+
+      \  \"achievedLevel\": 10,\r
+
+      \  \"chosenRole\": \"PREFERRED_CUSTOMER\",\r
+
+      \  \"status\": \"ACTIVE\",\r
+
+      \  \"isPlaced\": false,\r
+
+      \  \"promotedAt\": null,\r
+
+      \  \"isRevoked\": false,\r
+
+      \  \"revokedAt\": null,\r
+
+      \  \"revokedReason\": null\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

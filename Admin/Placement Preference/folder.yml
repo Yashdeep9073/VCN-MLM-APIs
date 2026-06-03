@@ -1,0 +1,7 @@
+info:
+  name: Placement Preference
+  type: folder
+  seq: 56
+
+request:
+  auth: inherit

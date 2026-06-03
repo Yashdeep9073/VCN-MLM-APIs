@@ -1,0 +1,31 @@
+info:
+  name: Manual Adjust
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}users/preferred-customer/update/manual-adjust"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"userId\": 91,\r
+
+      \  \"manualBV\": 25,\r
+
+      \  \"manualRP\": 35,\r
+
+      \  \"notes\": \"Manual adjustment\"\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

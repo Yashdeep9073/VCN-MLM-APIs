@@ -1,0 +1,18 @@
+info:
+  name: Soft Delete Admin User
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}admin-users/delete/soft/5"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

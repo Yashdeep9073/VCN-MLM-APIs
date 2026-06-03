@@ -1,0 +1,18 @@
+info:
+  name: Product Reward Points
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}product-reward-pointes/read/2"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,28 @@
+info:
+  name: Bulk Product Upload
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}products/create/bulk-upload"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - postman-cloud:///1f13a5f6-b2b4-4ce0-82eb-4fe9ff6873f7
+      - name: category
+        type: text
+        value: products
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

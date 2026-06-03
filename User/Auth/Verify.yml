@@ -1,0 +1,22 @@
+info:
+  name: Verify
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_USER_URL}}auth/verify"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"token\":\"344392966a6de173890342f2c961bcbb0a5e43d200c9ae6af2ef1045273bb591\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

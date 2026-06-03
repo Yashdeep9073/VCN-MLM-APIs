@@ -1,0 +1,29 @@
+info:
+  name: Assign Permission to Role
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}role-permissions/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"roleId\":2,\r
+
+      \    \"permissionIds\":[1,2]\r
+
+      }"
+  auth:
+    type: bearer
+    token: ""
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

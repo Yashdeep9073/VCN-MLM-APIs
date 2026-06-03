@@ -1,0 +1,21 @@
+info:
+  name: Hard Delete Product Categories Bulk
+  type: http
+  seq: 7
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}product-categories/delete/hard/bulk"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r\n    \"categoryIds\":[1]\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

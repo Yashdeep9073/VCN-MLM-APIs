@@ -1,0 +1,18 @@
+info:
+  name: Soft Delete Master Wallet
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}wallet/delete/soft/2"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

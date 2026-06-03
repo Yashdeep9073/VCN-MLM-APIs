@@ -1,0 +1,23 @@
+info:
+  name: Login
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}auth/login"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"email\":\"admin@gmail.com\",\r
+
+      \    \"password\":\"Admin@123\"\r
+
+      }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

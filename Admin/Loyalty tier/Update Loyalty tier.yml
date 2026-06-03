@@ -1,0 +1,15 @@
+info:
+  name: Update Loyalty tier
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}loyalty-tier/update"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

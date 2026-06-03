@@ -1,0 +1,21 @@
+info:
+  name: Single Sync User
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}wallet/user-wallet/sync-user/9"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

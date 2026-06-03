@@ -1,0 +1,35 @@
+info:
+  name: Auto Parent + Soft Side
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}holding-tank/update/place"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"holdingId\": 18,\r
+
+      \    \"userId\": 19,\r
+
+      \    \"placement\": {\r
+
+      \        \"preference\": \"RIGHT\"\r
+
+      \    },\r
+
+      \    \"forcedPlacement\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

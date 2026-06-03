@@ -1,0 +1,29 @@
+info:
+  name: Full Auto Placement Update
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}holding-tank/update/place"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"holdingId\": 15,\r
+
+      \    \"userId\": 16,\r
+
+      \    \"forcedPlacement\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

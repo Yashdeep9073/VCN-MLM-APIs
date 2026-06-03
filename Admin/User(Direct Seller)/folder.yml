@@ -1,0 +1,7 @@
+info:
+  name: User(Direct Seller)
+  type: folder
+  seq: 14
+
+request:
+  auth: inherit

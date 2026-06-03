@@ -1,0 +1,35 @@
+info:
+  name: Create Product Variants
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}product-variant/create/11"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"sku\": \"ALOE-GEL-200ML\",\r
+
+      \  \"mrp\": 449,\r
+
+      \  \"sellingPrice\": 404,\r
+
+      \  \"distributorPrice\": 359,\r
+
+      \  \"weight\": 200,\r
+
+      \  \"isDefault\": false\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,33 @@
+info:
+  name: Create Master Wallet
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}wallet/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"Loyal Club Wallet\",\r
+
+      \    \"code\": \"LOYAL_CLUB\",\r
+
+      \    \"eligibilityType\": \"LOYAL_CLUB_ONLY\",\r
+
+      \    \"currency\": \"INR\",\r
+
+      \    \"unitType\": \"POINTS\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

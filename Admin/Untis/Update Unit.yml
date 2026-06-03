@@ -1,0 +1,31 @@
+info:
+  name: Update Unit
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}units/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": 1,\r
+
+      \    \"name\": \"Test\",\r
+
+      \    \"symbol\": \"t\",\r
+
+      \    \"type\": \"WEIGHT\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

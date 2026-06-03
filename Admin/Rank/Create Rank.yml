@@ -1,0 +1,31 @@
+info:
+  name: Create Rank
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}rank/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{ \"code\": \"testing\",\r
+
+      \ \"name\": \"Silver Rank\",\r
+
+      \  \"requiredRP\": 1000,\r
+
+      \   \"priority\": 1,\r
+
+      \    // \"backgroundImageId\": 5,\r
+
+      \     \"isActive\": true }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

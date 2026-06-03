@@ -1,0 +1,18 @@
+info:
+  name: Single Sync Wallet
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}wallet/user-wallet/sync-wallet/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

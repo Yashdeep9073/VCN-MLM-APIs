@@ -1,0 +1,27 @@
+info:
+  name: Create Bulk Product Tags
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}product-tags/create/bulk"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"productId\": 1,\r
+
+      \    \"tagIds\":[1,2,3]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

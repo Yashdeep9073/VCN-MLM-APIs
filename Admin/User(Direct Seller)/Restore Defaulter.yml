@@ -1,0 +1,18 @@
+info:
+  name: Restore Defaulter
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}users/direct-seller/update/defaulter/restore/13324234"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

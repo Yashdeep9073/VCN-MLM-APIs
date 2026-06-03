@@ -1,0 +1,31 @@
+info:
+  name: Verify Order
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_USER_URL}}orders/create/verify"
+  headers:
+    - name: Authorization
+      value: "{{USER_TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"razorpay_order_id\": \"order_SbMV2PazVckMLA\",\r
+
+      \  \"razorpay_payment_id\": \"pay_JK23XX8X\",\r
+
+      \  \"razorpay_signature\": \"89ds8f98sd7f9s8df7...\",\r
+
+      \  \"orderId\": 3\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,33 @@
+info:
+  name: Update Warehouse
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}warehouse/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": 1,\r
+
+      \    \"name\": \"Main Warehouse\",\r
+
+      \    \"code\": \"WH-DEL-01\",\r
+
+      \    \"location\": \"Panipat Industrial Area\",\r
+
+      \    \"isActive\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

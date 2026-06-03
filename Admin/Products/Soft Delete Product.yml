@@ -1,0 +1,21 @@
+info:
+  name: Soft Delete Product
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}products/delete/soft/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

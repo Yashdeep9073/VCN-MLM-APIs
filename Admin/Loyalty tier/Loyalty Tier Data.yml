@@ -1,0 +1,18 @@
+info:
+  name: Loyalty Tier Data
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}loyalty-tier/read"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

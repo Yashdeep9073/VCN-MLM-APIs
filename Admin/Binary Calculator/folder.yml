@@ -1,0 +1,7 @@
+info:
+  name: Binary Calculator
+  type: folder
+  seq: 58
+
+request:
+  auth: inherit

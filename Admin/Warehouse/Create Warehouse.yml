@@ -1,0 +1,31 @@
+info:
+  name: Create Warehouse
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}warehouse/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"name\": \"Secondary Warehouse\",\r
+
+      \  \"code\": \"WH-DEL-01\",\r
+
+      \  \"location\": \"Panipat Industrial Area\",\r
+
+      \  \"isActive\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

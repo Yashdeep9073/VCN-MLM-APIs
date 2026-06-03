@@ -1,0 +1,27 @@
+info:
+  name: Update Lead Followups
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}lead-follow-ups/2"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"note\": \"Customer confirmed interest, scheduled demo for next week\",\r
+
+      \  \"nextFollow\": \"2024-05-26T14:00:00.000Z\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

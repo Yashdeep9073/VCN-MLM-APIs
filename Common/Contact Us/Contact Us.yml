@@ -1,0 +1,32 @@
+info:
+  name: Contact Us
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}contact-us/create"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"name\": \"Rahul Sharma\",\r
+
+      \  \"email\": \"rahul@example.com\",\r
+
+      \  \"phone\": \"9876543210\",\r
+
+      \  \"office\": \"Delhi Office\",\r
+
+      \  \"subject\": \"Inquiry about services\",\r
+
+      \  \"message\": \"I would like to know more about your services.\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

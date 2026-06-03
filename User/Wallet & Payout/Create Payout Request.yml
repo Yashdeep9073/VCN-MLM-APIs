@@ -1,0 +1,27 @@
+info:
+  name: Create Payout Request
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LOCAL_USER_URL}}wallet/create/payout-request"
+  headers:
+    - name: Authorization
+      value: "{{USER_TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"walletCode\": \"COMMISSION\",\r
+
+      \  \"amount\": 200\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

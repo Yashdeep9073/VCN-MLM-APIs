@@ -1,0 +1,43 @@
+info:
+  name: Create Product Variant Attribute
+  type: http
+  seq: 1
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}product-variant-attribute/create/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"attributes\": [\r
+
+      \        {\r
+
+      \            \"attributeId\": 1,\r
+
+      \            \"attributeValueId\": 2\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"attributeId\": 2,\r
+
+      \            \"attributeValueId\": 5\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

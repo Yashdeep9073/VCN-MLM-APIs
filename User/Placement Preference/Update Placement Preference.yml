@@ -1,0 +1,25 @@
+info:
+  name: Update Placement Preference
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{LOCAL_USER_URL}}placement-preference/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"placementPreference\": \"LEFT\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

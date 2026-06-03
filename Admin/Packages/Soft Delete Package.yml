@@ -1,0 +1,18 @@
+info:
+  name: Soft Delete Package
+  type: http
+  seq: 3
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}packages/delete/soft/2"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

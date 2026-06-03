@@ -1,0 +1,33 @@
+info:
+  name: Update Product Category
+  type: http
+  seq: 8
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}product-categories/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": 9,\r
+
+      \    \"name\": \"Joint Care 69\",\r
+
+      \    \"isActive\": true,\r
+
+      \    \"imageId\":2\r
+
+      \r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

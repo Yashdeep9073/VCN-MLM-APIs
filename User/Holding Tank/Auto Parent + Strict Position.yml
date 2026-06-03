@@ -1,0 +1,35 @@
+info:
+  name: Auto Parent + Strict Position
+  type: http
+  seq: 8
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}holding-tank/update/place"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"holdingId\": 21,\r
+
+      \    \"userId\":  22,\r
+
+      \    \"placement\": {\r
+
+      \        \"position\": \"RIGHT\"\r
+
+      \    },\r
+
+      \    \"forcedPlacement\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

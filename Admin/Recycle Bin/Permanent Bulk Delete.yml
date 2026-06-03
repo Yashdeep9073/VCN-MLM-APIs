@@ -1,0 +1,21 @@
+info:
+  name: Permanent Bulk Delete
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}recycle-bin/delete/hard/bulk"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r\n    \"recycleBinIds\":[29]\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,22 @@
+info:
+  name: Verify Customer
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}auth/verify/customer"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"token\":\"8523d35ce461f1b15f3beb231dc2d95dcf5a18b3726c6b345c302575b8a26e84\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

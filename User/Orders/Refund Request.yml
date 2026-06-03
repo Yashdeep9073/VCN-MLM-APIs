@@ -1,0 +1,27 @@
+info:
+  name: Refund Request
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{LOCAL_USER_URL}}orders/update/refund"
+  headers:
+    - name: Authorization
+      value: "{{USER_TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"orderId\":1,\r
+
+      \    \"refundReason\":\"Refund\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

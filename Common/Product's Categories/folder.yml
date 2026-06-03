@@ -1,0 +1,7 @@
+info:
+  name: Product's Categories
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit

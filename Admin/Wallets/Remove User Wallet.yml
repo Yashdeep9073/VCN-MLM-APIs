@@ -1,0 +1,27 @@
+info:
+  name: Remove User Wallet
+  type: http
+  seq: 10
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}wallet/user-wallet/remove"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"userId\": 16,\r
+
+      \    \"walletId\": 5\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,29 @@
+info:
+  name: Create Deal
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}deals"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: text
+    data: "{\r
+
+      \  \"leadId\": 2,\r
+
+      \  \"value\": 500,\r
+
+      \  \"stage\": \"NEW\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

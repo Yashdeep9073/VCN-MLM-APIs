@@ -1,0 +1,31 @@
+info:
+  name: Update Inventory
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}inventory/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"productVariantId\": 1,\r
+
+      \    \"warehouseId\": 1,\r
+
+      \    \"quantity\": 1,\r
+
+      \    \"type\": \"DAMAGE\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

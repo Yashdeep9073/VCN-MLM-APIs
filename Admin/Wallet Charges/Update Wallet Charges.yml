@@ -1,0 +1,31 @@
+info:
+  name: Update Wallet Charges
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}wallet-charge/update/20"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"walletId\": 1,\r
+
+      \  \"name\": \"TDS\",\r
+
+      \  \"type\": \"PERCENTAGE\",\r
+
+      \  \"value\": 2\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

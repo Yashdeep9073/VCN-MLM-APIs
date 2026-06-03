@@ -1,0 +1,31 @@
+info:
+  name: Update Preferred Customer
+  type: http
+  seq: 1
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}users/preferred-customer/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\":1,\r
+
+      \    // \"password\":\"kelton7227\",\r
+
+      \    // \"confirmPassword\":\"kelton7227\"\r
+
+      \    \"profileImageId\":2\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

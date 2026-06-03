@@ -1,0 +1,28 @@
+info:
+  name: Create Media
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}media/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - postman-cloud:///1f1580b5-0c83-4a60-8c0b-c083abac94af
+      - name: "category "
+        type: text
+        value: products
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

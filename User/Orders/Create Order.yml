@@ -1,0 +1,35 @@
+info:
+  name: Create Order
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LOCAL_USER_URL}}orders/create"
+  headers:
+    - name: Authorization
+      value: "{{USER_TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"items\": [\r
+
+      \    { \"variantId\": 1, \"quantity\": 1 },\r
+
+      \    { \"variantId\": 2, \"quantity\": 1 }\r
+
+      \  ],\r
+
+      \  \"buyerType\": \"DIRECT_SELLER\",\r
+
+      \  \"paymentMode\": \"ONLINE\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

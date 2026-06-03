@@ -1,0 +1,18 @@
+info:
+  name: Hard Delete Product Category
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}product-categories/delete/hard/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

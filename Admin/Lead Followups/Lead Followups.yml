@@ -1,0 +1,29 @@
+info:
+  name: Lead Followups
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}lead-follow-ups"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"leadId\": 2,\r
+
+      \  \"note\": \"Called the customer, they are interested in the product\",\r
+
+      \  \"nextFollow\": \"2024-05-25T10:00:00.000Z\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

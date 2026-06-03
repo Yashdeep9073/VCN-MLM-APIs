@@ -1,0 +1,7 @@
+info:
+  name: Promotion Eligibility
+  type: folder
+  seq: 7
+
+request:
+  auth: inherit

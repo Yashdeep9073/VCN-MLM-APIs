@@ -1,0 +1,39 @@
+info:
+  name: Create Admin User
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}admin-users/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"name\": \"Yashdeep\",\r
+
+      \  \"email\": \"yashdeep@vibrantick.in\",\r
+
+      \  \"userName\": \"Yashdeep2025\",\r
+
+      \  \"phone\": \"6239334177\",\r
+
+      \  \"password\": \"Yash@2025\",\r
+
+      \  \"roleId\": 1,\r
+
+      \  \"isVerified\": true,\r
+
+      \  \"imageId\": 1\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

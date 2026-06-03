@@ -1,0 +1,39 @@
+info:
+  name: Update CMS Page
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}cms-pages/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\":4,\r
+
+      \  \"title\": \"About Us updated\"\r
+
+      //   \"slug\": \"about-u\",\r
+
+      //   \"description\": \"This is the about page of the website\",\r
+
+      //   \"pageType\": \"ABOUT\",\r
+
+      //   \"seoId\": 1,\r
+
+      //   \"isHomePage\": false,\r
+
+      //   \"isActive\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

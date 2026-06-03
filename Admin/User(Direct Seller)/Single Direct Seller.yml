@@ -1,0 +1,18 @@
+info:
+  name: Single Direct Seller
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}users/direct-seller/read/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

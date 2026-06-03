@@ -1,0 +1,28 @@
+info:
+  name: Create Inventory Bulk
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}inventory/create/bulk-upload"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - postman-cloud:///1f15046e-0370-4130-80f3-79d0a4feab4c
+      - name: category
+        type: text
+        value: inventory
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

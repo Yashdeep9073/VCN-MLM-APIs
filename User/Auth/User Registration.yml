@@ -1,0 +1,38 @@
+info:
+  name: User Registration
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LOCAL_USER_URL}}auth/register"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"firstName\": \"Yash\",\r
+
+      \  \"lastName\": \"deep\",\r
+
+      \  \"email\": \"ydeep9073@gmail.com\",\r
+
+      \  \"phone\": \"8872712065\",\r
+
+      \  \"password\": \"Yashdeep@123\",\r
+
+      \  \"confirmPassword\": \"Yashdeep@123\",\r
+
+      \  \"sponsorUsername\": \"Founder01\",\r
+
+      \  \"desiredMembershipType\":\"PREFERRED_CUSTOMER\",\r
+
+      \  \"placementPreference\": \"LEFT\"\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

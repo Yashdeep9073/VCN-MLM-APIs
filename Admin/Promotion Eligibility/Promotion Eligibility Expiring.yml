@@ -1,0 +1,25 @@
+info:
+  name: Promotion Eligibility Expiring
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}promotion-eligibility/read/expiring?days=43limit=2&page=1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  params:
+    - name: days
+      value: 43limit=2
+      type: query
+    - name: page
+      value: "1"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

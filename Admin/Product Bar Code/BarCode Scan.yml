@@ -1,0 +1,25 @@
+info:
+  name: BarCode Scan
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}barcodes/scan/resolve"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"scanData\": \"PV000002-SKULQWXLMC1-E9872E\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

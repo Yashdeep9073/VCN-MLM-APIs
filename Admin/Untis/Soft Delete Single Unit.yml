@@ -1,0 +1,18 @@
+info:
+  name: Soft Delete Single Unit
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

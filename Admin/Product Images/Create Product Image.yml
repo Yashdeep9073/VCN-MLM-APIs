@@ -1,0 +1,31 @@
+info:
+  name: Create Product Image
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}product-images/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"productId\": 1,\r
+
+      \  \"productVariantId\": 1,\r
+
+      \  \"mediaId\": 1,\r
+
+      \  \"isPrimary\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

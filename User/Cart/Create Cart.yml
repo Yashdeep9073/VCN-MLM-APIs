@@ -1,0 +1,27 @@
+info:
+  name: Create Cart
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_USER_URL}}cart/create"
+  headers:
+    - name: Authorization
+      value: "{{USER_TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"variantId\": 10,\r
+
+      \    \"quantity\":1\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

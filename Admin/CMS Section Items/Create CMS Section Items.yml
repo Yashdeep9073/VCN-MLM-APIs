@@ -1,0 +1,53 @@
+info:
+  name: Create CMS Section Items
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}cms-section-items/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"sectionId\": 2,\r
+
+      \  \"title\": \"Fast Delivery\",\r
+
+      \  \"subtitle\": \"Quick & Reliable\",\r
+
+      \  \"description\": \"We provide fast and secure delivery services worldwide.\",\r
+
+      //   \"imageId\": 10,\r
+
+      \  \"icon\": \"truck\",\r
+
+      \  \"buttonText\": \"Learn More\",\r
+
+      \  \"buttonLink\": \"/services\",\r
+
+      \  \"extraData\": {\r
+
+      \    \"color\": \"#ff6600\",\r
+
+      \    \"animation\": \"fade-up\",\r
+
+      \    \"highlight\": true\r
+
+      \  },\r
+
+      \  \"sortOrder\": 1,\r
+
+      \  \"isActive\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

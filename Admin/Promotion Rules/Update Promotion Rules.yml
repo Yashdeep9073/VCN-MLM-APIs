@@ -1,0 +1,45 @@
+info:
+  name: Update Promotion Rules
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}promotion-rule/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"id\": 1,\r
+
+      \  \"ruleName\": \"10 BV Preferred Customer Rule\",\r
+
+      \  \"membershipFrom\": \"CUSTOMER\",\r
+
+      \  \"membershipTo\": \"PREFERRED_CUSTOMER\",\r
+
+      \  \"requiredBV\": 10,\r
+
+      \  \"daysToAchieve\": 45,\r
+
+      \  \"effectiveFrom\": \"2026-03-09T05:55:55.722Z\",\r
+
+      \  \"effectiveTo\":  \"2026-03-09T05:55:55.722Z\",\r
+
+      \  \"createdBy\": 1,\r
+
+      \  \"isAutoPromotion\":true,\r
+
+      \  \"isAutoPlacement\":false\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

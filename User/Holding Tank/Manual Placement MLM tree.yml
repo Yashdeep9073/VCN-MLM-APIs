@@ -1,0 +1,35 @@
+info:
+  name: Manual Placement MLM tree
+  type: http
+  seq: 3
+
+http:
+  method: PATCH
+  url: "{{LOCAL_USER_URL}}holding-tank/update/place"
+  headers:
+    - name: Authorization
+      value: "{{USER_TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"holdingId\":3,\r
+
+      \  \"userId\": 4,\r
+
+      \  \"placement\": {\r
+
+      \    \"position\": \"LEFT\"\r
+
+      \  },\r
+
+      \  \"forcedPlacement\":true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

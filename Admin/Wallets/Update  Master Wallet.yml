@@ -1,0 +1,35 @@
+info:
+  name: Update  Master Wallet
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}wallet/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": 7,\r
+
+      \    \"name\": \"Loyal Club Wallet\",\r
+
+      \    \"code\": \"LOYAL_CLUB\",\r
+
+      \    \"eligibilityType\": \"LOYAL_CLUB_ONLY\",\r
+
+      \    \"currency\": \"INR\",\r
+
+      \    \"unitType\": \"MONEY\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

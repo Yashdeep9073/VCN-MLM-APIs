@@ -1,0 +1,40 @@
+opencollection: 1.0.0
+
+info:
+  name: "VCN MLM "
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  variables:
+    - name: LOCAL_ADMIN_URL
+      value: http://localhost:5050/admin/
+    - name: SERVER_ADMIN_URL
+      value: https://api.mlm.vcarenetwork.in/admin/
+    - name: TOKEN
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6IlNZU1RFTV9BRE1JTiIsImlhdCI6MTc3Nzk3NTg0NywiZXhwIjoyMDkzMzM1ODQ3fQ.HOKmBtEaVltwXrUO2e4ZSjizQcDpOnfp8VHzBX-3K7k
+    - name: LOCAL_COMMON_URL
+      value: http://localhost:5050/common/
+    - name: LOCAL_USER_URL
+      value: http://localhost:5050/users/
+    - name: USER_TOKEN
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyb290QHZjbi5jb20iLCJtZW1iZXJzaGlwVHlwZSI6IkRJUkVDVF9TRUxMRVIiLCJpc0FjdGl2ZSI6dHJ1ZSwiaXNWZXJpZmllZCI6dHJ1ZSwiaXNQYXlvdXRBY3RpdmUiOmZhbHNlLCJ0b2tlblZlcnNpb24iOiIzNDkzZjNlNy03NzljLTQzNDQtOTFmOC0wZWIxMTQyNjY2NGQiLCJpYXQiOjE3ODA0NzAxMjAsImV4cCI6MjA5NTgzMDEyMH0.B1gxwqPQkvZSPiZRRC2YttFl9hAYb21SRZRkxyKr0xU
+    - name: SERVER_USER_URL
+      value: https://api.mlm.vcarenetwork.in/users/
+    - name: SERVER_COMMON_URL
+      value: https://api.mlm.vcarenetwork.in/common/
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

@@ -1,0 +1,43 @@
+info:
+  name: Create Customer
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}users/customer/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"userName\": \"rohit.sharma1\",\r
+
+      \    \"firstName\": \"Rohit\",\r
+
+      \    \"lastName\": \"Sharma\",\r
+
+      \    \"email\": \"rohit.sharma@vcnmail.com\",\r
+
+      \    \"phone\": \"7981234569\",\r
+
+      \    \"password\": \"Rohit@123\",\r
+
+      \    \"confirmPassword\": \"Rohit@123\",\r
+
+      \    \"sponsorUsername\": \"Founder01\",\r
+
+      \    \"placementPreference\": \"RIGHT\"\r
+
+      \    // \"profileImageId\": 1\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,31 @@
+info:
+  name: Membership
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}users/preferred-customer/update/membership"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"userId\": 38,\r
+
+      \  \"membershipType\": \"DIRECT_SELLER\",\r
+
+      \  \"force\": true,\r
+
+      \  \"notes\": \"Admin override\"\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

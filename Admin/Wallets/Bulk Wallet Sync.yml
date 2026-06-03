@@ -1,0 +1,21 @@
+info:
+  name: Bulk Wallet Sync
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}wallet/user-wallet/sync-wallet/bulk"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r\n    \"walletIds\":[6]\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

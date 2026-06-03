@@ -1,0 +1,29 @@
+info:
+  name: Get All BarCode
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}barcodes/read"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: text
+    data: "{\r
+
+      \    \"productVariantId\":1,\r
+
+      \    \"type\": \"CODE128\"\r
+
+      \r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

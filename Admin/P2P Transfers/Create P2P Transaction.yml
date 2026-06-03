@@ -1,0 +1,33 @@
+info:
+  name: Create P2P Transaction
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}p2p-transfers/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"fromUserId\": 101,\r
+
+      \  \"toUserId\": 202,\r
+
+      \  \"walletId\": 1,\r
+
+      \  \"amount\": 1500,\r
+
+      \  \"note\": \"Helping with subscription\"\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

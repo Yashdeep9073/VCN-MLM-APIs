@@ -1,0 +1,7 @@
+info:
+  name: Team Genealogy
+  type: folder
+  seq: 15
+
+request:
+  auth: inherit

@@ -1,0 +1,18 @@
+info:
+  name: Fund Deposit History
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}fund-deposit/read"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

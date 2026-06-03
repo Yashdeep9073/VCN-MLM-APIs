@@ -1,0 +1,29 @@
+info:
+  name: Soft Delete Permission Bulk
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}permissions/delete/soft/bulk"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"permissionIds\": [\r
+
+      \        3,4\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

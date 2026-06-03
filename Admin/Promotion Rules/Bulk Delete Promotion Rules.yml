@@ -1,0 +1,29 @@
+info:
+  name: Bulk Delete Promotion Rules
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}promotions/delete/soft/bulk"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"promotionRuleIds\":[\r
+
+      \        8,9\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

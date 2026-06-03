@@ -1,0 +1,31 @@
+info:
+  name: Create Reward Points
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}product-reward-pointes/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"productVariantId\": 1,\r
+
+      \    \"bv\": 10,\r
+
+      \    \"lpPercentage\": 10.00\r
+
+      \r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

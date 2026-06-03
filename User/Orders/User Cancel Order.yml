@@ -1,0 +1,18 @@
+info:
+  name: User Cancel Order
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{LOCAL_USER_URL}}orders/cancel/1"
+  headers:
+    - name: Authorization
+      value: "{{USER_TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

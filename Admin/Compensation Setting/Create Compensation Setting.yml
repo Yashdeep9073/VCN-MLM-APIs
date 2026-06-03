@@ -1,0 +1,41 @@
+info:
+  name: Create Compensation Setting
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}compensation-setting/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"pairUnitBV\": 50,\r
+
+      \  \"pairIncome\": 900,\r
+
+      \  \"weeklyPairCap\": 100,\r
+
+      \  \"bvConversionRate\": 9,\r
+
+      \  \"rpPerPair\": 1,\r
+
+      \  \"carryForward\": true,\r
+
+      \  \"binaryMode\": \"STRICT\",\r
+
+      \  \"allowSelfPairing\": true\r
+
+      \  \r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

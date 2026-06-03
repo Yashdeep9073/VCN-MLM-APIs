@@ -1,0 +1,41 @@
+info:
+  name: Update Admin User
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}admin-users/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\":2,\r
+
+      \  \"name\": \"Yashdeep\",\r
+
+      \  \"email\": \"yashdeep@vibrantick.in\",\r
+
+      \  \"userName\": \"Yashdeep2025\",\r
+
+      \  \"phone\": \"6239334177\",\r
+
+      \  \"password\": \"Yash@2025\",\r
+
+      \  \"roleId\": 1,\r
+
+      \  \"isVerified\": true,\r
+
+      \  \"imageId\": 2\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

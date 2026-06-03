@@ -1,0 +1,18 @@
+info:
+  name: All Child Nodes Single User
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{LOCAL_USER_URL}}team-genealogy/read/children/3"
+  headers:
+    - name: Authorization
+      value: "{{USER_TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

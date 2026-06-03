@@ -1,0 +1,25 @@
+info:
+  name: Create Fake User
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}users/customer/create/dev/fake-user"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"parentUserName\": \"test2020\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,61 @@
+info:
+  name: Update Package
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}packages/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"id\": 3,\r
+
+      \  \"name\": \"Regular Starter Pack - Updated\",\r
+
+      \  \"sku\": \"PKG-REG-10BV-NEW\",\r
+
+      \  \"price\": 899,\r
+
+      \  \"description\": \"Updated description for the 10BV starter pack.\",\r
+
+      \  \"image\": \"starter-pack-updated.png\",\r
+
+      \  \"isSuperSaver\": false,\r
+
+      \  \"isRegularPack\": true,\r
+
+      \  \"isActive\": true,\r
+
+      \  \"items\": [\r
+
+      \    {\r
+
+      \      \"productId\": 1,\r
+
+      \      \"quantity\": 1\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"productId\": 4,\r
+
+      \      \"quantity\": 3\r
+
+      \    }\r
+
+      \  ]\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

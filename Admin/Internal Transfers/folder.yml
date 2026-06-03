@@ -1,0 +1,7 @@
+info:
+  name: Internal Transfers
+  type: folder
+  seq: 32
+
+request:
+  auth: inherit

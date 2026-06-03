@@ -1,0 +1,18 @@
+info:
+  name: Earnings Overview Chart
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{LOCAL_USER_URL}}dashboard/read/earnings-overview"
+  headers:
+    - name: Authorization
+      value: "{{USER_TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

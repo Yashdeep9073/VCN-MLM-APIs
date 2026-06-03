@@ -1,0 +1,25 @@
+info:
+  name: Products
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{SERVER_COMMON_URL}}product/read?page=14&limit=1"
+  params:
+    - name: page
+      value: "14"
+      type: query
+    - name: limit
+      value: "1"
+      type: query
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

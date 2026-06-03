@@ -1,0 +1,18 @@
+info:
+  name: All Promotion Rules
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{SERVER_ADMIN_URL}}promotion-rule/read"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

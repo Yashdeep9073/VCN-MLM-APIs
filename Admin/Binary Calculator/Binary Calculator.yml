@@ -1,0 +1,33 @@
+info:
+  name: Binary Calculator
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}binary-calculator/create/binary/calculate"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"leftBV\": 50,\r
+
+      \  \"rightBV\": 50,\r
+
+      \  \"projectionDays\": 7,\r
+
+      \  \"dailyLeftBV\": 20,\r
+
+      \  \"dailyRightBV\": 15\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

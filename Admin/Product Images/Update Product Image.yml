@@ -1,0 +1,33 @@
+info:
+  name: Update Product Image
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}product-images/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"id\": 1,\r
+
+      \  \"productId\": 1,\r
+
+      \  \"productVariantId\": 1,\r
+
+      \  \"mediaId\": 1,\r
+
+      \  \"isPrimary\": false\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

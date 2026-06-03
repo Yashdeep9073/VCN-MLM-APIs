@@ -1,0 +1,7 @@
+info:
+  name: CMS Page
+  type: folder
+  seq: 59
+
+request:
+  auth: inherit

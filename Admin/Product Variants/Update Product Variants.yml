@@ -1,0 +1,31 @@
+info:
+  name: Update Product Variants
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}product-variant/update/11"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"productImages\": [\r
+
+      \    \"https://yourcdn.com/products/aloe-200-front.jpg\",\r
+
+      \    \"https://yourcdn.com/products/aloe-200-back.jpg\"\r
+
+      \  ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

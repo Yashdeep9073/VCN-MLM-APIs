@@ -1,0 +1,19 @@
+info:
+  name: Delete Single Item
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{SERVER_COMMON_URL}}cart/delete/item/4?sessionId=1"
+  params:
+    - name: sessionId
+      value: "1"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

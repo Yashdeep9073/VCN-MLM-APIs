@@ -1,0 +1,32 @@
+info:
+  name: Wallet Stats
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}financial/read/wallet?page=1&limit=10&code=RANK"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  params:
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "10"
+      type: query
+    - name: from
+      value: 07-01-2026
+      type: query
+      disabled: true
+    - name: code
+      value: RANK
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

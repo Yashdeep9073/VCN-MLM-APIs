@@ -1,0 +1,7 @@
+info:
+  name: Promotion Rules
+  type: folder
+  seq: 21
+
+request:
+  auth: inherit

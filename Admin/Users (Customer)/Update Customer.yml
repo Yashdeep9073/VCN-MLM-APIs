@@ -1,0 +1,43 @@
+info:
+  name: Update Customer
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}users/customer/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": 16,\r
+
+      \    // \"userName\": \"YashDeep123\",\r
+
+      \    // \"firstName\": \"Yashdeep\",\r
+
+      \    // \"lastName\": \"Singh\",\r
+
+      \    // \"email\": \"TavaresMarquardt@yahoo.com\",\r
+
+      \    // \"phone\": \"8872712066\",\r
+
+      \    // \"password\": \"Yash@9073\",\r
+
+      \    // \"confirmPassword\": \"Yash@9073\",\r
+
+      \    // \"placementPreference\": \"LEFT\",\r
+
+      \    \"profileImageId\": 2\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

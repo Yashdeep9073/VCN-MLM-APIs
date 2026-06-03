@@ -1,0 +1,33 @@
+info:
+  name: Create/Update Payout Preference
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_USER_URL}}wallet/create/payout-preference"
+  headers:
+    - name: Authorization
+      value: "{{USER_TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"method\": \"BANK_TRANSFER\",\r
+
+      \  \"accountHolderName\": \"Tavares Marquardt\",\r
+
+      \  \"bankName\": \"HDFC Bank\",\r
+
+      \  \"accountNumber\": \"123456789012\",\r
+
+      \  \"ifscCode\": \"HDFC0000123\"\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,36 @@
+info:
+  name: Update Role
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}roles/update"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6IkFkbWluIiwiaWF0IjoxNzYyMzIyOTQzLCJleHAiOjE3NjI0MDkzNDN9.XUtTCyXi1lUsJY75IIRBD_WYe5BarTma3ZSB8g_3hP0
+    - name: ""
+      value: ""
+      disabled: true
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": 3,\r
+
+      \    \"name\": \"HR\",\r
+
+      \        \"priority\": 70\r
+
+      \r
+
+      \    \"isActive\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

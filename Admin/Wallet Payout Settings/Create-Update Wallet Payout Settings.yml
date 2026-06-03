@@ -1,0 +1,45 @@
+info:
+  name: Create/Update Wallet Payout Settings
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}wallet-payout-settings/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"walletId\": 1,\r
+
+      \  \"isAutoPayout\": true,\r
+
+      \  \"schedule\": \"MANUAL\",\r
+
+      \  \"payoutDay\": \"MONDAY\",\r
+
+      \  \"refundWindowDays\": 30,\r
+
+      \  \"withdrawLimitPerYear\": 12,\r
+
+      \  \"minWithdrawAmount\": 100,\r
+
+      \  \"maxPayoutsPerBatch\": 10000,\r
+
+      \  \"withdrawCoolDownDays\": 7,\r
+
+      \  \"payoutStartTime\": \"1970-01-01T09:00:00Z\",\r
+
+      \  \"payoutEndTime\": \"1970-01-01T18:00:00Z\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

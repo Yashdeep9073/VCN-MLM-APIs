@@ -1,0 +1,27 @@
+info:
+  name: Update Tickets
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}tickets/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\":1,\r
+
+      \    \"status\":\"CLOSED\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

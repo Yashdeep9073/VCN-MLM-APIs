@@ -1,0 +1,29 @@
+info:
+  name: Soft Delete Roles Bulk
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}roles/delete/soft/bulk"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"roleIds\": [\r
+
+      \        2\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

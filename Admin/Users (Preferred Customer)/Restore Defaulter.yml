@@ -1,0 +1,23 @@
+info:
+  name: Restore Defaulter
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}users/preferred-customer/update/defaulter/restore/2"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  params:
+    - name: ""
+      value: ""
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

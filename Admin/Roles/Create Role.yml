@@ -1,0 +1,29 @@
+info:
+  name: Create Role
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}roles/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"Internal Admin\",\r
+
+      \    \"roleType\": \"INTERNAL_ADMIN\",\r
+
+      \    \"priority\": 70\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

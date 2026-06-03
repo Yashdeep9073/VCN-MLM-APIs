@@ -1,0 +1,18 @@
+info:
+  name: Delete Entire Cart
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{LOCAL_USER_URL}}cart/delete/clear"
+  headers:
+    - name: Authorization
+      value: "{{USER_TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

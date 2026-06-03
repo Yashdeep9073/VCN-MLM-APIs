@@ -1,0 +1,39 @@
+info:
+  name: Create Product
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}products/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"name\": \"ALOVERA GEL WITH HERBS\",\r
+
+      \  \"description\": \" Aloe Vera when taken internally aids in digestion and effectively cleanses the digestive system.\",\r
+
+      \  \"categoryId\": 1,\r
+
+      \  \"discountType\": \"PERCENTAGE\",\r
+
+      \  \"discountValue\": 10,\r
+
+      \  \"tagIds\": [],\r
+
+      \  \"status\": \"PUBLISHED\"\r
+
+      \    //\"DRAFT\", \"ARCHIVED\", \"PUBLISHED\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,31 @@
+info:
+  name: Update Product
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}products/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\": 11,\r
+
+      \    //   \"description\": \"Aloe Vera when taken internally aids in digestion and effectively cleanses the digestive system.\"\r
+
+      \    \"status\": \"DRAFT\"\r
+
+      \    //\"DRAFT\", \"ARCHIVED\", \"PUBLISHED\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,31 @@
+info:
+  name: Create Wallet Charges
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}wallet-charge/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"walletId\": 2,\r
+
+      \  \"name\": \"Admin Fee\",\r
+
+      \  \"type\": \"PERCENTAGE\",\r
+
+      \  \"value\": 2\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

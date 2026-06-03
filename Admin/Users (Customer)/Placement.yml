@@ -1,0 +1,29 @@
+info:
+  name: Placement
+  type: http
+  seq: 9
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}users/customer/update/place"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"userId\": 38,\r
+
+      \  \"parentId\": 11,\r
+
+      \  \"position\": \"LEFT\"\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

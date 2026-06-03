@@ -1,0 +1,83 @@
+info:
+  name: Update CMS Section Items
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}cms-sections/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"id\":1,\r
+
+      //   \"pageId\": 3,\r
+
+      //   \"name\": \"Home Hero Section\",\r
+
+      //   \"sectionKey\": \"home-hero\",\r
+
+      //   \"sectionType\": \"HERO\",\r
+
+      //   \"title\": \"Welcome to Our Website\",\r
+
+      //   \"subtitle\": \"Build Modern Experiences\",\r
+
+      //   \"description\": \"This is the hero section description.\",\r
+
+      // //   \"imageId\": 12,\r
+
+      // //   \"mobileImageId\": 13,\r
+
+      // //   \"backgroundImageId\": 14,\r
+
+      //   \"videoUrl\": \"https://example.com/video.mp4\",\r
+
+      //   \"buttonText\": \"Get Started\",\r
+
+      //   \"buttonLink\": \"/contact\",\r
+
+      //   \"styles\": {\r
+
+      //     \"backgroundColor\": \"#000000\",\r
+
+      //     \"textColor\": \"#ffffff\",\r
+
+      //     \"padding\": \"100px 0\"\r
+
+      //   },\r
+
+      //   \"config\": {\r
+
+      //     \"autoplay\": true,\r
+
+      //     \"showOverlay\": true,\r
+
+      //     \"overlayOpacity\": 0.5\r
+
+      //   },\r
+
+      //   \"extraData\": {\r
+
+      //     \"animation\": \"fade-up\",\r
+
+      //     \"customClass\": \"hero-section\"\r
+
+      //   },\r
+
+      //   \"sortOrder\": 1,\r
+
+      \  \"isActive\": false\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,37 @@
+info:
+  name: Create CMS Page
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{SERVER_ADMIN_URL}}cms-pages/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"title\": \"About Us\",\r
+
+      \  \"slug\": \"about-u\",\r
+
+      \  \"description\": \"This is the about page of the website\",\r
+
+      \  \"pageType\": \"ABOUT\",\r
+
+      //   \"seoId\": 1,\r
+
+      \  \"isHomePage\": false,\r
+
+      \  \"isActive\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

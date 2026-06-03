@@ -1,0 +1,51 @@
+info:
+  name: Update Promotion Eligibility
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}promotion-eligibility/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"id\": 44,\r
+
+      \  \"userId\": 123,\r
+
+      \  \"ruleId\": 5,\r
+
+      \  \"eligibleAt\": \"2026-03-18T10:30:00.000Z\",\r
+
+      \  \"expiryAt\": \"2026-05-02T10:30:00.000Z\",\r
+
+      \  \"membershipTo\": \"DIRECT_SELLER\",\r
+
+      \  \"achievedLevel\": 25,\r
+
+      \  \"chosenRole\": \"DISTRIBUTOR\",\r
+
+      \  \"status\": \"COMPLETED\",\r
+
+      \  \"isPlaced\": true,\r
+
+      \  \"promotedAt\": \"2026-03-20T08:00:00.000Z\",\r
+
+      \  \"isRevoked\": false,\r
+
+      \  \"revokedAt\": null,\r
+
+      \  \"revokedReason\": null\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

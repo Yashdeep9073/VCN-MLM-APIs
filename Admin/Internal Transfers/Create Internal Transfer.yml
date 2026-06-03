@@ -1,0 +1,31 @@
+info:
+  name: Create Internal Transfer
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}internal-transfers/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"userId\":1,\r
+
+      \    \"fromWalletId\":1,\r
+
+      \    \"toWalletId\":2,\r
+
+      \    \"amount\":1.0\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

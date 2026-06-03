@@ -1,0 +1,29 @@
+info:
+  name: Soft Delete Bulk Direct Seller
+  type: http
+  seq: 7
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}users/direct-seller/delete/soft/bulk"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"directSellerIds\": [\r
+
+      \        2131\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
