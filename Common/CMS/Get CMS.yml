@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{LOCAL_COMMON_URL}}cms-pages/read"
+  url: "{{LOCAL_COMMON_URL}}cms-pages/read?sectionType=OFFERS"
+  params:
+    - name: sectionType
+      value: OFFERS
+      type: query
   auth: inherit
 
 settings:

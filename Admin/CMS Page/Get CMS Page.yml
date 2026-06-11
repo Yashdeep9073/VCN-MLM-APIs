@@ -5,10 +5,14 @@ info:
 
 http:
   method: GET
-  url: "{{LOCAL_ADMIN_URL}}cms-pages/read"
+  url: "{{LOCAL_ADMIN_URL}}cms-pages/read?pageType=HOME"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
+  params:
+    - name: pageType
+      value: HOME
+      type: query
   auth: inherit
 
 settings:

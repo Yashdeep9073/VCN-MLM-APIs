@@ -12,19 +12,19 @@ http:
   body:
     type: multipart-form
     data:
-      - name: file
-        type: file
-        value:
-          - /home/yashdeep/Downloads/EAJA79-INV-20250730061821-00010 (2).pdf
       - name: title
         type: text
         value: CV
-      - name: altText
-        type: text
-        value: asdaksnk
       - name: folder
         type: text
         value: DOCUMENT
+      - name: altText
+        type: text
+        value: asdaksnk
+      - name: file
+        type: file
+        value:
+          - /home/yashdeep/Downloads/riya_fullstack_developer_1_year.pdf
   auth: inherit
 
 settings:

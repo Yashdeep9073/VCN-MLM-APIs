@@ -1,5 +1,5 @@
 info:
-  name: "Crreate Media Bulk "
+  name: "Create Media Bulk "
   type: http
   seq: 5
 
@@ -12,13 +12,13 @@ http:
   body:
     type: multipart-form
     data:
+      - name: folder
+        type: text
+        value: PRODUCT
       - name: file
         type: file
         value:
           - /home/yashdeep/Downloads/Alpha Care-20260609T081529Z-3-001.zip
-      - name: folder
-        type: text
-        value: DOCUMENT
   auth: inherit
 
 settings:
