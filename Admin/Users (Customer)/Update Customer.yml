@@ -11,29 +11,21 @@ http:
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \    \"id\": 16,\r
-
-      \    // \"userName\": \"YashDeep123\",\r
-
-      \    // \"firstName\": \"Yashdeep\",\r
-
-      \    // \"lastName\": \"Singh\",\r
-
-      \    // \"email\": \"TavaresMarquardt@yahoo.com\",\r
-
-      \    // \"phone\": \"8872712066\",\r
-
-      \    // \"password\": \"Yash@9073\",\r
-
-      \    // \"confirmPassword\": \"Yash@9073\",\r
-
-      \    // \"placementPreference\": \"LEFT\",\r
-
-      \    \"profileImageId\": 2\r
-
-      }"
+    data: |-
+      {
+          "id": 12,
+          // "userName": "YashDeep123",
+          // "firstName": "Yashdeep",
+          // "lastName": "Singh",
+          // "email": "TavaresMarquardt@yahoo.com",
+          // "phone": "8872712066",
+          // "password": "Yash@9073",
+          // "confirmPassword": "Yash@9073",
+          // "placementPreference": "LEFT",
+          //     "profileImageId": 2
+          "accountStatus":"ACTIVE",
+          "isVerified":true
+      }
   auth: inherit
 
 settings:

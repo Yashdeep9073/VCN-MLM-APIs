@@ -1,7 +1,7 @@
 info:
   name: Untis
   type: folder
-  seq: 48
+  seq: 47
 
 request:
   auth: inherit

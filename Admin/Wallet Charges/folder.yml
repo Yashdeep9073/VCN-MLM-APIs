@@ -1,7 +1,7 @@
 info:
   name: Wallet Charges
   type: folder
-  seq: 37
+  seq: 36
 
 request:
   auth: inherit

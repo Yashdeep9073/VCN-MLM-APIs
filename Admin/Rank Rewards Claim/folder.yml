@@ -1,7 +1,7 @@
 info:
   name: Rank Rewards Claim
   type: folder
-  seq: 28
+  seq: 27
 
 request:
   auth: inherit

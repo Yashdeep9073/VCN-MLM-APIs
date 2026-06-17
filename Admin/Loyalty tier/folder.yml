@@ -1,7 +1,7 @@
 info:
   name: Loyalty tier
   type: folder
-  seq: 36
+  seq: 35
 
 request:
   auth: inherit

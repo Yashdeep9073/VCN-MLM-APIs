@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{LOCAL_ADMIN_URL}}users/customer/read/16"
+  url: "{{LOCAL_ADMIN_URL}}users/customer/read/12"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

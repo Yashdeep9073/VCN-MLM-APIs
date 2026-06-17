@@ -1,7 +1,7 @@
 info:
   name: Fund Deposit
   type: folder
-  seq: 33
+  seq: 32
 
 request:
   auth: inherit
