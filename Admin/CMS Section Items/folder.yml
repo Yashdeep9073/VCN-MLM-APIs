@@ -1,7 +1,7 @@
 info:
   name: CMS Section Items
   type: folder
-  seq: 61
+  seq: 60
 
 request:
   auth: inherit

@@ -5,13 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{LOCAL_ADMIN_URL}}users/customer/read?limit=1&page=16"
+  url: "{{LOCAL_ADMIN_URL}}users/customer/read?limit=&page=16"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   params:
     - name: limit
-      value: "1"
+      value: ""
       type: query
     - name: page
       value: "16"

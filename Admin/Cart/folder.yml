@@ -1,7 +1,7 @@
 info:
   name: Cart
   type: folder
-  seq: 54
+  seq: 53
 
 request:
   auth: inherit

@@ -1,7 +1,7 @@
 info:
   name: Compensation Setting
   type: folder
-  seq: 35
+  seq: 34
 
 request:
   auth: inherit

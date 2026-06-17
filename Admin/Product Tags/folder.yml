@@ -1,7 +1,7 @@
 info:
   name: Product Tags
   type: folder
-  seq: 46
+  seq: 45
 
 request:
   auth: inherit

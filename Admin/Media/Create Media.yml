@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{LOCAL_ADMIN_URL}}media/create"
+  url: "{{SERVER_ADMIN_URL}}media/create"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
@@ -14,17 +14,17 @@ http:
     data:
       - name: title
         type: text
-        value: ee
-      - name: altText
-        type: text
-        value: asdaksnk
+        value: CV
       - name: folder
         type: text
         value: DOCUMENT
+      - name: altText
+        type: text
+        value: asdaksnk
       - name: file
         type: file
         value:
-          - C:\Users\Mayankgoyal\Downloads\789201.pdf
+          - /home/yashdeep/Downloads/riya_fullstack_developer_1_year.pdf
   auth: inherit
 
 settings:

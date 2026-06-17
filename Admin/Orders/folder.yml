@@ -1,7 +1,7 @@
 info:
   name: Orders
   type: folder
-  seq: 20
+  seq: 19
 
 request:
   auth: inherit

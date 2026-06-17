@@ -1,7 +1,7 @@
 info:
   name: Product Variant Attributes
   type: folder
-  seq: 45
+  seq: 44
 
 request:
   auth: inherit

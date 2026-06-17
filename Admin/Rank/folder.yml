@@ -1,7 +1,7 @@
 info:
   name: Rank
   type: folder
-  seq: 26
+  seq: 25
 
 request:
   auth: inherit

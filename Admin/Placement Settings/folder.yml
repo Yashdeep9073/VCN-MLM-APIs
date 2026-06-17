@@ -1,7 +1,7 @@
 info:
   name: Placement Settings
   type: folder
-  seq: 39
+  seq: 38
 
 request:
   auth: inherit
