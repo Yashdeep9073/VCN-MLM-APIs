@@ -11,25 +11,18 @@ http:
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \    \"id\":4,\r
-
-      \  \"title\": \"About Us updated\"\r
-
-      //   \"slug\": \"about-u\",\r
-
-      //   \"description\": \"This is the about page of the website\",\r
-
-      //   \"pageType\": \"ABOUT\",\r
-
-      //   \"seoId\": 1,\r
-
-      //   \"isHomePage\": false,\r
-
-      //   \"isActive\": true\r
-
-      }"
+    data: |-
+      {
+          "id":11,
+      //   "title": "About Us updated"
+      //   "slug": "about-u",
+      //   "description": "This is the about page of the website",
+      //   "pageType": "ABOUT",
+      //   "seoId": 1,
+      //   "isHomePage": false,
+      //   "isActive": true
+        "productId":6
+      }
   auth: inherit
 
 settings:

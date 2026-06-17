@@ -5,29 +5,23 @@ info:
 
 http:
   method: POST
-  url: "{{SERVER_ADMIN_URL}}cms-pages/create"
+  url: "{{LOCAL_ADMIN_URL}}cms-pages/create"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \  \"title\": \"About Us\",\r
-
-      \  \"slug\": \"about-u\",\r
-
-      \  \"description\": \"This is the about page of the website\",\r
-
-      \  \"pageType\": \"ABOUT\",\r
-
-      //   \"seoId\": 1,\r
-
-      \  \"isHomePage\": false,\r
-
-      \  \"isActive\": true\r
-
-      }"
+    data: |-
+      {
+        "title": "About Us",
+        "slug": "about-u",
+        "description": "This is the about page of the website",
+        "pageType": "ABOUT",
+      //   "seoId": 1,
+        "isHomePage": false,
+        "isActive": true,
+        "productId":1
+      }
   auth: inherit
 
 settings:

@@ -1,0 +1,26 @@
+info:
+  name: Create Impersonat
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}impersonate/start"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "userId": 5,
+        "reason": "Testing",
+          "isReadOnly": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

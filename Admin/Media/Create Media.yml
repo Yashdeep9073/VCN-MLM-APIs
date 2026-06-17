@@ -12,19 +12,19 @@ http:
   body:
     type: multipart-form
     data:
-      - name: file
-        type: file
-        value:
-          - /home/yashdeep/Downloads/EAJA79-INV-20250730061821-00010 (2).pdf
       - name: title
         type: text
-        value: CV
+        value: ee
       - name: altText
         type: text
         value: asdaksnk
       - name: folder
         type: text
         value: DOCUMENT
+      - name: file
+        type: file
+        value:
+          - C:\Users\Mayankgoyal\Downloads\789201.pdf
   auth: inherit
 
 settings:

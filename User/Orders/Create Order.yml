@@ -8,7 +8,7 @@ http:
   url: "{{LOCAL_USER_URL}}orders/create"
   headers:
     - name: Authorization
-      value: "{{USER_TOKEN}}"
+      value: "{{IMPERSONATION_TOKEN}}"
   body:
     type: json
     data: "{\r

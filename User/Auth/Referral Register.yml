@@ -1,11 +1,11 @@
 info:
-  name: User Registration
+  name: Referral Register
   type: http
-  seq: 2
+  seq: 4
 
 http:
   method: POST
-  url: "{{LOCAL_USER_URL}}auth/register"
+  url: "{{LOCAL_USER_URL}}auth/register/referral"
   body:
     type: json
     data: |
@@ -16,8 +16,7 @@ http:
         "phone": "8872712065",
         "password": "Yashdeep@123",
         "confirmPassword": "Yashdeep@123",
-        "sponsorUsername": "Founder01",
-        
+        "referralCode": "ZAGXTTCD",
         "desiredMembershipType":"PREFERRED_CUSTOMER",
         "placementPreference": "LEFT"
       }

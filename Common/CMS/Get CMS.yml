@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{LOCAL_COMMON_URL}}cms-pages/read"
+  url: "{{LOCAL_COMMON_URL}}cms-pages/read?productId=4"
+  params:
+    - name: productId
+      value: "4"
+      type: query
   auth: inherit
 
 settings:

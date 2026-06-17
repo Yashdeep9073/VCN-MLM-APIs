@@ -1,11 +1,11 @@
 info:
-  name: Single Media Data
+  name: Get Logs Of Impersonat Session
   type: http
   seq: 4
 
 http:
   method: GET
-  url: "{{LOCAL_ADMIN_URL}}media/read/1"
+  url: "{{LOCAL_ADMIN_URL}}impersonate/logs"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
