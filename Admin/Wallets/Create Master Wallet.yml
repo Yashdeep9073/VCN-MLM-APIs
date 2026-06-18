@@ -11,19 +11,14 @@ http:
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \    \"name\": \"Loyal Club Wallet\",\r
-
-      \    \"code\": \"LOYAL_CLUB\",\r
-
-      \    \"eligibilityType\": \"LOYAL_CLUB_ONLY\",\r
-
-      \    \"currency\": \"INR\",\r
-
-      \    \"unitType\": \"POINTS\"\r
-
-      }"
+    data: |-
+      {
+          "name": "Royal Club Wallet",
+          "code": "ROYALITY_CLUB",
+          "eligibilityType": "ROYALITY_CLUB_ONLY",
+          "currency": "INR",
+          "unitType": "POINTS"
+      }
   auth: inherit
 
 settings:

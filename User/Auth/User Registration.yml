@@ -17,7 +17,6 @@ http:
         "password": "Yashdeep@123",
         "confirmPassword": "Yashdeep@123",
         "sponsorUsername": "Founder01",
-        
         "desiredMembershipType":"PREFERRED_CUSTOMER",
         "placementPreference": "LEFT"
       }

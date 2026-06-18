@@ -11,23 +11,16 @@ http:
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \  \"customerId\": 2,\r
-
-      \  \"items\": [\r
-
-      \    { \"variantId\": 1, \"quantity\": 4 },\r
-
-      \    { \"variantId\": 2, \"quantity\": 1 }\r
-
-      \  ],\r
-
-      \  \"buyerType\": \"DIRECT_SELLER\",\r
-
-      \  \"paymentMode\": \"ONLINE\"\r
-
-      }"
+    data: |-
+      {
+        "customerId": 2,
+        "items": [
+          { "variantId": 1, "quantity": 1 }
+      //     { "variantId": 2, "quantity": 1 }
+        ],
+        "buyerType": "DIRECT_SELLER",
+        "paymentMode": "ONLINE"
+      }
 
 settings:
   encodeUrl: true

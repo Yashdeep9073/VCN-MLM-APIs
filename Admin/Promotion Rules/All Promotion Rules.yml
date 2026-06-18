@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{SERVER_ADMIN_URL}}promotion-rule/read"
+  url: "{{LOCAL_ADMIN_URL}}promotion-rule/read"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
