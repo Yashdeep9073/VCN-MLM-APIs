@@ -9,12 +9,6 @@ http:
   headers:
     - name: Authorization
       value: "{{USER_TOKEN}}"
-  body:
-    type: json
-    data: |-
-      {
-        "isPrimary":false
-      }
   auth: inherit
 
 settings:

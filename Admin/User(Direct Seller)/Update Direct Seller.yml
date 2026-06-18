@@ -11,17 +11,13 @@ http:
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \    \"id\":1,\r
-
-      \    // \"password\":\"kelton7227\",\r
-
-      \    // \"confirmPassword\":\"kelton7227\"\r
-
-      \    \"profileImageId\":2\r
-
-      }"
+    data: |-
+      {
+          "id":1,
+          "password":"kelton7227",
+          "confirmPassword":"kelton7227"
+      //     "profileImageId":2
+      }
   auth: inherit
 
 settings:

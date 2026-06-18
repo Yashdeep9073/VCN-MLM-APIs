@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{SERVER_ADMIN_URL}}team-genealogy/read/downline/1"
+  url: "{{LOCAL_ADMIN_URL}}team-genealogy/read/downline/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
