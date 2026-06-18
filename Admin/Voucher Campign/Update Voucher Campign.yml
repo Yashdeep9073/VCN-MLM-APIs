@@ -1,11 +1,11 @@
 info:
-  name: Bulk Soft Delete Units
+  name: Update Voucher Campign
   type: http
-  seq: 6
+  seq: 4
 
 http:
-  method: DELETE
-  url: "{{LOCAL_ADMIN_URL}}units/delete/soft/bulk"
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}voucher-campaign/update"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
@@ -13,9 +13,10 @@ http:
     type: json
     data: |-
       {
-          "unitIds": [
-              12
-          ]
+        "id": "1",
+        "name": "Summer Sale 2027",
+        "endDate": "2026-08-31T23:59:59.000Z",
+        "isActive": false
       }
   auth: inherit
 
