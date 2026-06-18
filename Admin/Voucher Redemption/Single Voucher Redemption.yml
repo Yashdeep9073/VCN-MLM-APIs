@@ -1,11 +1,11 @@
 info:
-  name: Restore
+  name: Single Voucher Redemption
   type: http
   seq: 2
 
 http:
-  method: POST
-  url: "{{LOCAL_ADMIN_URL}}recycle-bin/restore/1"
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}voucher-redemption/read/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

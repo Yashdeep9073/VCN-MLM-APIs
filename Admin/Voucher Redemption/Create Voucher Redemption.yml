@@ -1,0 +1,28 @@
+info:
+  name: Create Voucher Redemption
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}voucher-redemption/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "voucherId": "1",
+        "userId": 1,
+      //   "orderId": 101,
+        "redeemedAmount": 250,
+        "redeemedAt": "2026-06-18T10:30:00.000Z"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

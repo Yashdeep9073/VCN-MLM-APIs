@@ -1,8 +1,7 @@
 info:
-  name: Product's Categories
+  name: Voucher Redemption
   type: folder
-  seq: 2
+  seq: 69
 
 request:
   auth: inherit
-  value:

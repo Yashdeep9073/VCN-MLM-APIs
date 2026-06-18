@@ -1,8 +1,7 @@
 info:
-  name: Product's Categories
+  name: Voucher
   type: folder
-  seq: 2
+  seq: 68
 
 request:
   auth: inherit
-  value:

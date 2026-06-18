@@ -1,0 +1,28 @@
+info:
+  name: Create Voucher Campign
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}voucher-campaign/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Summer hhh ",
+        "description": "Flat 20% off on selected products",
+        "startDate": "2026-06-20T00:00:00.000Z",
+        "endDate": "2026-07-20T23:59:59.000Z",
+        "isActive": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

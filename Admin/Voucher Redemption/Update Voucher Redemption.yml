@@ -1,0 +1,29 @@
+info:
+  name: Update Voucher Redemption
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}voucher-redemption/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "id": "1",
+        "voucherId": "1",
+        "userId": 4,
+      //   "orderId": 120,
+        "redeemedAmount": 300,
+        "redeemedAt": "2026-06-19T12:00:00.000Z"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
