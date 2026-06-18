@@ -1,11 +1,11 @@
 info:
-  name: Restore
+  name: Delete Voucher Redemption
   type: http
-  seq: 2
+  seq: 5
 
 http:
-  method: POST
-  url: "{{LOCAL_ADMIN_URL}}recycle-bin/restore/1"
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}voucher-redemption/delete/soft/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
