@@ -1,11 +1,11 @@
 info:
-  name: Bulk Soft Delete Units
+  name: "Update Voucher "
   type: http
-  seq: 6
+  seq: 4
 
 http:
-  method: DELETE
-  url: "{{LOCAL_ADMIN_URL}}units/delete/soft/bulk"
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}voucher/update"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
@@ -13,9 +13,10 @@ http:
     type: json
     data: |-
       {
-          "unitIds": [
-              12
-          ]
+        "id": "1",
+        "amount": 750,
+        "maxUsage": 150,
+        "isActive": false
       }
   auth: inherit
 

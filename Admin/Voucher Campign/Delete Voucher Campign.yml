@@ -1,22 +1,14 @@
 info:
-  name: Bulk Soft Delete Units
+  name: Delete Voucher Campign
   type: http
-  seq: 6
+  seq: 5
 
 http:
   method: DELETE
-  url: "{{LOCAL_ADMIN_URL}}units/delete/soft/bulk"
+  url: "{{LOCAL_ADMIN_URL}}voucher-campaign/delete/soft/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
-  body:
-    type: json
-    data: |-
-      {
-          "unitIds": [
-              12
-          ]
-      }
   auth: inherit
 
 settings:
