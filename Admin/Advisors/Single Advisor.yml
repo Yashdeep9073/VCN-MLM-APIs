@@ -1,11 +1,11 @@
 info:
-  name: Single Customer
+  name: Single Advisor
   type: http
-  seq: 4
+  seq: 2
 
 http:
   method: GET
-  url: "{{LOCAL_ADMIN_URL}}users/customer/read/13"
+  url: "{{LOCAL_ADMIN_URL}}advisors/read/11"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

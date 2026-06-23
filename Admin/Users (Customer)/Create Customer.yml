@@ -11,29 +11,19 @@ http:
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \    \"userName\": \"rohit.sharma1\",\r
-
-      \    \"firstName\": \"Rohit\",\r
-
-      \    \"lastName\": \"Sharma\",\r
-
-      \    \"email\": \"rohit.sharma@vcnmail.com\",\r
-
-      \    \"phone\": \"7981234569\",\r
-
-      \    \"password\": \"Rohit@123\",\r
-
-      \    \"confirmPassword\": \"Rohit@123\",\r
-
-      \    \"sponsorUsername\": \"Founder01\",\r
-
-      \    \"placementPreference\": \"RIGHT\"\r
-
-      \    // \"profileImageId\": 1\r
-
-      }"
+    data: |-
+      {
+          "userName": "rohit.sharma1",
+          "firstName": "Yash",
+          "lastName": "Sharma",
+          "email": "yashdeep@vibrantick.in",
+          "phone": "7981234569",
+          "password": "Yash@123",
+          "confirmPassword": "Yash@123",
+          "sponsorUsername": "Founder01",
+          "placementPreference": "RIGHT"
+          // "profileImageId": 1
+      }
   auth: inherit
 
 settings:
