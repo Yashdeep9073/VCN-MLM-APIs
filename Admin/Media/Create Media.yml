@@ -24,7 +24,7 @@ http:
       - name: file
         type: file
         value:
-          - /home/yashdeep/Downloads/riya_fullstack_developer_1_year.pdf
+          - C:\Users\Mayankgoyal\Downloads\fasohf Report.pdf
   auth: inherit
 
 settings:

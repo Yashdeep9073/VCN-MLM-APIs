@@ -1,11 +1,11 @@
 info:
-  name: Restore
+  name: Read Blog Category
   type: http
-  seq: 2
+  seq: 1
 
 http:
-  method: POST
-  url: "{{LOCAL_ADMIN_URL}}recycle-bin/restore/2"
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}blog-category/read"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

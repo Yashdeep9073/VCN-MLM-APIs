@@ -1,23 +1,21 @@
 info:
-  name: Update Unit
+  name: Create Bulk Blog Category Mapping
   type: http
-  seq: 4
+  seq: 5
 
 http:
-  method: PATCH
-  url: "{{LOCAL_ADMIN_URL}}units/update"
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}blog-category-mapping/create/bulk"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   body:
     type: json
-    data: |-
+    data: |
       {
+        "blogId":3 ,
+        "categoryIds":[2,3,4]
         
-          "id": 12,
-          "name": "Test",
-          "symbol": "t",
-          "type": "WEIGHT"
       }
   auth: inherit
 

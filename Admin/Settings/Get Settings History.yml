@@ -1,11 +1,11 @@
 info:
-  name: Restore
+  name: Get Settings History
   type: http
-  seq: 2
+  seq: 8
 
 http:
-  method: POST
-  url: "{{LOCAL_ADMIN_URL}}recycle-bin/restore/2"
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}settings/read/history/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

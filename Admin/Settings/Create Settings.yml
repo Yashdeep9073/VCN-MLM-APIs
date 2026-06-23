@@ -1,0 +1,46 @@
+info:
+  name: Create Settings
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}settings/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{
+
+      \  \"key\": \"SNA_1\",
+
+      \  \"value\":\"fao f,afha \" ,
+
+      \  \"dataType\":\"STRING\",
+
+      \  \"group\":\"GENERAL\",
+
+      \  \"label\":\"akfha ofoajflaj faof aofjaoj\",
+
+      \  \"description\":\"LFHAOH\",
+
+      \  \"isPublic\":true,
+
+      \  \"isEditable\":true
+
+      }
+
+
+
+
+      \ \ 
+
+      \  "
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
