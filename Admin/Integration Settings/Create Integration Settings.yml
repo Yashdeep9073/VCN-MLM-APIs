@@ -1,0 +1,29 @@
+info:
+  name: Create Integration Settings
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}integration-settings/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "type": "PAYMENT",
+        "provider": "fao f,afha",
+        "config": {
+          "hello": "jhel"
+        },
+        "isActive": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

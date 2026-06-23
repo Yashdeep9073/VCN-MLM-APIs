@@ -1,0 +1,18 @@
+info:
+  name: Get Integration Settings By Type
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}integration-settings/read/type/SMS"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,49 @@
+info:
+  name: Update Integration Settings
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}website-settings/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "siteName": "VCN MLM",
+        "siteUrl": "https://vcnmlm.com",
+
+      //   "logoId": "1",
+      //   "darkLogoId": "2",
+      //   "faviconId": "3",
+
+        "supportEmail": "support@vcnmlm.com",
+        "supportPhone": "+91-9876543210",
+        "whatsappNumber": "+91-9876543210",
+
+        "address": "Dera Bassi, Punjab, India",
+
+        "facebookUrl": "https://facebook.com/vcnmlm",
+        "instagramUrl": "https://instagram.com/vcnmlm",
+        "twitterUrl": "https://twitter.com/vcnmlm",
+        "youtubeUrl": "https://youtube.com/@vcnmlm",
+        "linkedinUrl": "https://linkedin.com/company/vcnmlm",
+
+        "footerText": "Welcome to VCN MLM platform.",
+        "footerCopyright": "© 2026 VCN MLM. All Rights Reserved.",
+
+        "googleAnalyticsId": "G-ABC123XYZ",
+        "facebookPixelId": "123456789",
+
+        "isMaintenanceMode": false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
