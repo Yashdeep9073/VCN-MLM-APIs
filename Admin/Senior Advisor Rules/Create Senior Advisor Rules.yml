@@ -1,11 +1,11 @@
 info:
-  name: Restore Bulk
+  name: Create Senior Advisor Rules
   type: http
   seq: 3
 
 http:
   method: POST
-  url: "{{LOCAL_ADMIN_URL}}recycle-bin/restore/bulk"
+  url: "{{LOCAL_ADMIN_URL}}senior-advisor-rules/create"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
@@ -13,9 +13,11 @@ http:
     type: json
     data: |-
       {
-        "recycleBinIds": [
-          2,3
-        ]
+        "name": "Bronze Senior Advisor",
+        "minTeamBV": 50000,
+        "minQualifiedAdvisors": 5,
+        "minActiveAdvisors": 5,
+        "isActive": true
       }
   auth: inherit
 

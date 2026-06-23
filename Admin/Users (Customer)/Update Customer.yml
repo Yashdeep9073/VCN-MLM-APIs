@@ -13,9 +13,9 @@ http:
     type: json
     data: |-
       {
-          "id": 12,
+          "id": 13,
           // "userName": "YashDeep123",
-          "firstName": "Yashdeep",
+      //     "firstName": "Yashdeep",
           // "lastName": "Singh",
           // "email": "TavaresMarquardt@yahoo.com",
           // "phone": "8872712066",
@@ -23,6 +23,7 @@ http:
           // "confirmPassword": "Yash@9073",
           // "placementPreference": "LEFT",
           //     "profileImageId": 2
+          "sponsorUsername":"Founder01",
           "accountStatus":"ACTIVE",
           "isVerified":true
       }

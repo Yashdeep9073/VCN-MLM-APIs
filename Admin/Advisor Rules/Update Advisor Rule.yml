@@ -1,11 +1,11 @@
 info:
-  name: Restore Bulk
+  name: "Update Advisor Rule "
   type: http
-  seq: 3
+  seq: 4
 
 http:
-  method: POST
-  url: "{{LOCAL_ADMIN_URL}}recycle-bin/restore/bulk"
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}advisor-rules/update/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
@@ -13,9 +13,10 @@ http:
     type: json
     data: |-
       {
-        "recycleBinIds": [
-          2,3
-        ]
+        "name": "Gold Advisor",
+        "minPersonalBV": 5000,
+        "minPairBV": 20000,
+        "isActive": true
       }
   auth: inherit
 

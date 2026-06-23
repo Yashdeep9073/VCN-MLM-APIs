@@ -1,21 +1,22 @@
 info:
-  name: Create Fake User
+  name: Create Advisor Rule
   type: http
-  seq: 8
+  seq: 3
 
 http:
   method: POST
-  url: "{{LOCAL_ADMIN_URL}}users/customer/create/dev/fake-user"
+  url: "{{LOCAL_ADMIN_URL}}advisor-rules/create"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \    \"parentUserName\": \"test2020\"\r
-
-      }"
+    data: |-
+      {
+        "name": "Bronze Advisor",
+        "minPersonalBV": 1000,
+        "minPairBV": 5000
+      }
   auth: inherit
 
 settings:

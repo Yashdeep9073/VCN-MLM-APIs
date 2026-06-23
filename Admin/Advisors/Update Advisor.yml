@@ -1,25 +1,22 @@
 info:
-  name: Placement
+  name: "Update Advisor "
   type: http
-  seq: 8
+  seq: 4
 
 http:
   method: PUT
-  url: "{{LOCAL_ADMIN_URL}}users/preferred-customer/update/place"
+  url: "{{LOCAL_ADMIN_URL}}advisors/update/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \  \"userId\": 38,\r
-
-      \  \"parentId\": 11,\r
-
-      \  \"position\": \"LEFT\"\r
-
-      }\r\n"
+    data: |-
+      {
+        "status": "APPROVED",
+        "mentorSeniorAdvisorId": 5,
+        "remarks": "Approved after verification"
+      }
   auth: inherit
 
 settings:

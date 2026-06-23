@@ -1,0 +1,7 @@
+info:
+  name: Advisor Rules
+  type: folder
+  seq: 71
+
+request:
+  auth: inherit

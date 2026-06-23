@@ -1,0 +1,30 @@
+info:
+  name: Update Senior Advisor
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}senior-advisors/update/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "isActive": true,
+        "remarks": "Promoted regional lead",
+        "areaNames": [
+          "Punjab",
+          "Chandigarh",
+          "Haryana"
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

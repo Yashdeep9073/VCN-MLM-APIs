@@ -1,21 +1,21 @@
 info:
-  name: Create Fake User
+  name: Delete Bulk Senior Advisor Rule
   type: http
-  seq: 8
+  seq: 6
 
 http:
-  method: POST
-  url: "{{LOCAL_ADMIN_URL}}users/customer/create/dev/fake-user"
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}senior-advisor-rules/delete/soft/bulk"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \    \"parentUserName\": \"test2020\"\r
-
-      }"
+    data: |-
+      {
+        "seniorAdvisorRuleIds":[126]
+        
+      }
   auth: inherit
 
 settings:

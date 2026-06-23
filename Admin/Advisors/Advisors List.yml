@@ -1,19 +1,21 @@
 info:
-  name: Restore Defaulter
+  name: Advisors List
   type: http
-  seq: 7
+  seq: 1
 
 http:
-  method: POST
-  url: "{{LOCAL_ADMIN_URL}}users/preferred-customer/update/defaulter/restore/2"
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}advisors/read?page=5&limit=2"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   params:
-    - name: ""
-      value: ""
+    - name: page
+      value: "5"
       type: query
-      disabled: true
+    - name: limit
+      value: "2"
+      type: query
   auth: inherit
 
 settings:

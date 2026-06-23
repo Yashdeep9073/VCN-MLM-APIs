@@ -1,11 +1,11 @@
 info:
-  name: Restore Bulk
+  name: Create Senior Advisor
   type: http
   seq: 3
 
 http:
   method: POST
-  url: "{{LOCAL_ADMIN_URL}}recycle-bin/restore/bulk"
+  url: "{{LOCAL_ADMIN_URL}}senior-advisors/create"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
@@ -13,8 +13,12 @@ http:
     type: json
     data: |-
       {
-        "recycleBinIds": [
-          2,3
+        "userId": 15,
+        "remarks": "Promoted by admin",
+        "areaNames": [
+          "Punjab",
+          "Chandigarh",
+          "Haryana"
         ]
       }
   auth: inherit

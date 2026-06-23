@@ -13,12 +13,12 @@ http:
     type: json
     data: |-
       {
-        "customerId": 2,
+        "customerId": 12,
         "items": [
           { "variantId": 1, "quantity": 1 }
       //     { "variantId": 2, "quantity": 1 }
         ],
-        "buyerType": "DIRECT_SELLER",
+        "buyerType": "PREFERRED_CUSTOMER",
         "paymentMode": "ONLINE"
       }
 

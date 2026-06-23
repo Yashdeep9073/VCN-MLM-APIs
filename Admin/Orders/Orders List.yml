@@ -1,20 +1,18 @@
 info:
-  name: Restore Defaulter
+  name: Orders List
   type: http
-  seq: 7
+  seq: 3
 
 http:
-  method: POST
-  url: "{{LOCAL_ADMIN_URL}}users/preferred-customer/update/defaulter/restore/2"
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}orders/read?limit="
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   params:
-    - name: ""
+    - name: limit
       value: ""
       type: query
-      disabled: true
-  auth: inherit
 
 settings:
   encodeUrl: true
