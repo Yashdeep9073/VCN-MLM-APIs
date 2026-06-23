@@ -1,14 +1,22 @@
 info:
-  name: Restore
+  name: Create Blog Tag Mapping
   type: http
-  seq: 2
+  seq: 3
 
 http:
   method: POST
-  url: "{{LOCAL_ADMIN_URL}}recycle-bin/restore/2"
+  url: "{{LOCAL_ADMIN_URL}}blog-tag-mapping/create"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "blogId":3 ,
+        "tagId":1 
+        
+      }
   auth: inherit
 
 settings:

@@ -1,0 +1,31 @@
+info:
+  name: "Create Blog "
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}blog/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "Updated Omega 3 Benefits",
+        "slug": "updated-omega-3-benefits-99",
+        "excerpt": "Updated excerpt",
+        "status": "PUBLISHED",
+        "content": "hh",
+        "seoTitle": "Updated SEO title",
+        "seoDescription": "Updated SEO description",
+        "isActive": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

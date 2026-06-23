@@ -1,11 +1,11 @@
 info:
-  name: Update Voucher Campign
+  name: Update Blog Category
   type: http
   seq: 4
 
 http:
   method: PATCH
-  url: "{{LOCAL_ADMIN_URL}}voucher-campaign/update"
+  url: "{{LOCAL_ADMIN_URL}}blog-category/update"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
@@ -13,9 +13,10 @@ http:
     type: json
     data: |-
       {
-        "id": "1",
-        "name": "Summer Sale 2027",
-        "endDate": "2026-08-31T23:59:59.000Z",
+        "id":1,
+        "name": "first update",
+        "slug": "first-sa",
+        "description": "hello kse ho app",
         "isActive": true
       }
   auth: inherit

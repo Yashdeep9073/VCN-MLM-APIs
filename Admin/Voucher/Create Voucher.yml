@@ -14,7 +14,7 @@ http:
     data: |-
       {
         "campaignId": "1",
-        "code": "SUMMER2026",
+        "code": "SUMMER20267",
         "amount": 500,
         "expiryDate": "2026-12-31T23:59:59.000Z",
         "maxUsage": 100,

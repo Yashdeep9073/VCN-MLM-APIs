@@ -1,0 +1,42 @@
+info:
+  name: Create Blog Comments
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}blog-comment/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: "{
+
+      \  \"blogId\":3 ,
+
+      \  \"userId\":1 ,
+
+      \  \"name\":\"ma\",
+
+      \  \"email\":\"fhaho@gmaoilc.com\",
+
+      \  \"comment\":\"akfha ofoajflaj faof aofjaoj\"
+
+      \ \ 
+
+      }
+
+
+
+
+      \ \ 
+
+      \  "
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

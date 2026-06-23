@@ -1,11 +1,11 @@
 info:
-  name: Restore
+  name: Get Settings By Group
   type: http
-  seq: 2
+  seq: 6
 
 http:
-  method: POST
-  url: "{{LOCAL_ADMIN_URL}}recycle-bin/restore/2"
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}settings/read/grouped"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

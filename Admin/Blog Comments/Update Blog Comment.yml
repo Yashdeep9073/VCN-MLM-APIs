@@ -1,23 +1,24 @@
 info:
-  name: Update Voucher Campign
+  name: Update Blog Comment
   type: http
-  seq: 4
+  seq: 5
 
 http:
   method: PATCH
-  url: "{{LOCAL_ADMIN_URL}}voucher-campaign/update"
+  url: "{{LOCAL_ADMIN_URL}}blog-comment/update"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   body:
     type: json
-    data: |-
+    data: |+
       {
-        "id": "1",
-        "name": "Summer Sale 2027",
-        "endDate": "2026-08-31T23:59:59.000Z",
-        "isActive": true
+       "id":1,
+        "comment":"akfha ofoajflaj faof aofjaoj",
+        "isApproved":true
+        
       }
+
   auth: inherit
 
 settings:

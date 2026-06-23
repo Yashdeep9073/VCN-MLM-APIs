@@ -1,0 +1,7 @@
+info:
+  name: Blog Category Mapping
+  type: folder
+  seq: 72
+
+request:
+  auth: inherit
