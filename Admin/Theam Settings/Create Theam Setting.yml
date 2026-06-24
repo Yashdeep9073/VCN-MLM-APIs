@@ -1,0 +1,41 @@
+info:
+  name: Create Theam Setting
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}theme-settings/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "My Theme",
+        "scope": "PUBLIC",
+        "primaryColor": "#2563eb",
+        "secondaryColor": "#1e40af",
+        "accentColor": "#f59e0b",
+        "backgroundColor": "#ffffff",
+        "textColor": "#111827",
+      //     "logoId"  :1,
+      //   "faviconId": 1,
+        "fontFamily": "Inter",
+        "borderRadius": "8px",
+        "boxShadow": "0 4px 10px rgba(0,0,0,0.1)",
+        "config": {
+          "layout": "modern",
+          "sidebar": true
+        },
+        "isDefault": false,
+        "isActive": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

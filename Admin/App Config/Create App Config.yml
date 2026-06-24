@@ -1,0 +1,29 @@
+info:
+  name: Create App Config
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}app-configs/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "appKey": "FIRS_DD",
+        "config": {
+          "layout": "modern",
+          "sidebar": true
+        }
+
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
