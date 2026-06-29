@@ -13,7 +13,7 @@ http:
     type: json
     data: |-
       {
-        "customerId": 12,
+        "customerId": 1,
         "items": [
           { "variantId": 1, "quantity": 1 }
       //     { "variantId": 2, "quantity": 1 }
