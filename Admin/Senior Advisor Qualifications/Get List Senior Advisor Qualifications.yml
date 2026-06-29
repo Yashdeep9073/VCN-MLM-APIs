@@ -1,11 +1,11 @@
 info:
-  name: Single User
+  name: Get List Senior Advisor Qualifications
   type: http
-  seq: 2
+  seq: 1
 
 http:
   method: GET
-  url: "{{LOCAL_ADMIN_URL}}holding-tank/read/2"
+  url: "{{LOCAL_ADMIN_URL}}senior-advisor-qualifications/read"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

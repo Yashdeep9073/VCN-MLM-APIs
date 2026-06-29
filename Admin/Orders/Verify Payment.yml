@@ -13,11 +13,11 @@ http:
     type: json
     data: |+
       {
-        "razorpay_order_id": "order_T3ToeYleCE3y3k",
+        "razorpay_order_id": "order_T5TLCwKFS5MzaU",
         "razorpay_payment_id": "pay_JK23XX8X",
         "razorpay_signature": "89ds8f98sd7f9s8df7...",
-        "orderId":1,
-        "userId":12
+        "orderId":3,
+        "userId":3
       }
 
 settings:

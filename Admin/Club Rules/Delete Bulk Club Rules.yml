@@ -1,19 +1,19 @@
 info:
-  name: Update Profile
+  name: Delete Bulk Club Rules
   type: http
-  seq: 2
+  seq: 6
 
 http:
-  method: PUT
-  url: "{{LOCAL_USER_URL}}profile/update"
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}club-rules/delete/soft/bulk"
   headers:
     - name: Authorization
-      value: "{{USER_TOKEN}}"
+      value: "{{TOKEN}}"
   body:
     type: json
     data: |-
       {
-          "email":"Jill_Bednar@yahoo.com"
+        "clubRuleIds":[1]
       }
   auth: inherit
 
