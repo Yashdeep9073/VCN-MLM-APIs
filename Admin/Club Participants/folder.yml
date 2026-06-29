@@ -1,0 +1,7 @@
+info:
+  name: "Club Participants "
+  type: folder
+  seq: 84
+
+request:
+  auth: inherit

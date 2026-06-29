@@ -13,9 +13,9 @@ http:
     type: json
     data: |-
       {
-        "customerId": 12,
+        "customerId": 3,
         "items": [
-          { "variantId": 1, "quantity": 1 }
+          { "variantId": 1, "quantity": 3 }
       //     { "variantId": 2, "quantity": 1 }
         ],
         "buyerType": "PREFERRED_CUSTOMER",

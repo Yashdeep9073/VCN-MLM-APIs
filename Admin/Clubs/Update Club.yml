@@ -1,0 +1,41 @@
+info:
+  name: Update Club
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}clubs/update/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Royal Club June 2026",
+        "description": "Users who achieve 5000 BV and sponsor 5 active members during June 2026.",
+        "startDate": "2026-06-01T00:00:00.000Z",
+        "endDate": "2026-06-30T23:59:59.999Z",
+        "clubType": "ROYAL_CLUB",
+        "status": "CANCELLED",
+        "rules": [
+          {
+            "ruleType": "BV",
+            "operator": "GREATER_THAN_EQUAL",
+            "targetValue": 5000
+          },
+          {
+            "ruleType": "DIRECT_SPONSORS",
+            "operator": "GREATER_THAN_EQUAL",
+            "targetValue": 5
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

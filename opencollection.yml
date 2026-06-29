@@ -21,13 +21,13 @@ request:
     - name: SERVER_ADMIN_URL
       value: https://api.mlm.vcarenetwork.in/admin/
     - name: TOKEN
-      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoiU1lTVEVNX0FETUlOIiwidG9rZW5WZXJzaW9uIjoiNzI0ODNmNDAtOWNiMi00YTRhLTgxYTUtYTk3NTc0NjlhZGNiIiwiaWF0IjoxNzgyMTMxNTg0LCJleHAiOjIwOTc0OTE1ODR9.ABCEj6-JUvYEIZ9qJQfX-GNhbzyWcBMt_A4nId3zwxg
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoiU1lTVEVNX0FETUlOIiwidG9rZW5WZXJzaW9uIjoiM2U3YjdiODQtMDBiYS00MzlmLThiOGMtN2E5MGViZmQ0ZGQxIiwiaWF0IjoxNzgyMzA0NTkxLCJleHAiOjIwOTc2NjQ1OTF9._cwNhGMDORk2FpbTVOU0cmubIJ2kqKi0p41Cte_630E
     - name: LOCAL_COMMON_URL
       value: http://localhost:5050/common/
     - name: LOCAL_USER_URL
       value: http://localhost:5050/users/
     - name: USER_TOKEN
-      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyb290QHZjbi5jb20iLCJtZW1iZXJzaGlwVHlwZSI6IkRJUkVDVF9TRUxMRVIiLCJhY2NvdW50U3RhdHVzIjoiQUNUSVZFIiwiaXNWZXJpZmllZCI6dHJ1ZSwiaXNDb21wZW5zYXRpb25BY3RpdmUiOmZhbHNlLCJ0b2tlblZlcnNpb24iOiJmYmI5ZTdiZC1mNDUxLTQzMGYtYTI1NS0wYzYwOWZiZThiYjQiLCJpYXQiOjE3ODE2OTQ1MTgsImV4cCI6MjA5NzA1NDUxOH0.ye3l5hn7QP0HLpGknWKsK4u-XzKWEXmcz9mqOy3J8-E
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIiLCJlbWFpbCI6IkppbGxfQmVkbmFyQHlhaG9vLmNvbSIsIm1lbWJlcnNoaXBUeXBlIjoiUFJFRkVSUkVEX0NVU1RPTUVSIiwiYWNjb3VudFN0YXR1cyI6IkFDVElWRSIsImlzVmVyaWZpZWQiOnRydWUsImlzQ29tcGVuc2F0aW9uQWN0aXZlIjpmYWxzZSwidG9rZW5WZXJzaW9uIjoiMDVhZjZmYzMtZGY3Ny00MTY2LWI3NTQtNDFiNjljNGVhNTcwIiwiaWF0IjoxNzgyMjAzMTAyLCJleHAiOjIwOTc1NjMxMDJ9.vqyJz34fgdGlhBf5Be4R0K15VJc01iZhexRJeFA_L-4
     - name: SERVER_USER_URL
       value: https://api.mlm.vcarenetwork.in/users/
     - name: SERVER_COMMON_URL

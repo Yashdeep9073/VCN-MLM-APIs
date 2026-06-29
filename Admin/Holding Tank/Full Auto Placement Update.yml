@@ -11,15 +11,12 @@ http:
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \    \"holdingId\": 15,\r
-
-      \    \"userId\": 16,\r
-
-      \    \"forcedPlacement\": true\r
-
-      }"
+    data: |-
+      {
+          "holdingId": 2,
+          "userId": 3,
+          "forcedPlacement": true
+      }
   auth: inherit
 
 settings:

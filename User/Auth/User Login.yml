@@ -8,13 +8,11 @@ http:
   url: "{{LOCAL_USER_URL}}auth/login"
   body:
     type: json
-    data: "{\r
-
-      \    \"identifier\":\"root@vcn.com\",\r
-
-      \    \"password\":\"Founder@123\"\r
-
-      }"
+    data: |-
+      {
+          "identifier":"yolanda1012",
+          "password":"yolanda1012"
+      }
   auth: inherit
 
 settings:

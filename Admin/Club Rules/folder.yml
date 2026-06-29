@@ -1,0 +1,7 @@
+info:
+  name: Club Rules
+  type: folder
+  seq: 83
+
+request:
+  auth: inherit
