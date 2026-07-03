@@ -5,7 +5,7 @@ info:
 
 http:
   method: DELETE
-  url: "{{LOCAL_ADMIN_URL}}blog-comment/delete/1"
+  url: "{{LOCAL_ADMIN_URL}}settings/delete/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

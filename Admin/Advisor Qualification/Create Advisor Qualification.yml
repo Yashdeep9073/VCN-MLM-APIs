@@ -1,0 +1,30 @@
+info:
+  name: Create Advisor Qualification
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}advisor-qualifications/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "userId": 15,
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-07-31",
+        "qualified": false,
+        "status": "UNDER_REVIEW",
+        "advisorIncomeDefinitionId": 1,
+        "remarks": "Waiting for admin verification"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

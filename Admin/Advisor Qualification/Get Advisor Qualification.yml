@@ -1,5 +1,5 @@
 info:
-  name: Get Advisor Qualifications List
+  name: Get Advisor Qualification
   type: http
   seq: 1
 

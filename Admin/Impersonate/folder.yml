@@ -1,7 +1,7 @@
 info:
   name: Impersonate
   type: folder
-  seq: 66
+  seq: 65
 
 request:
   auth: inherit

@@ -1,7 +1,7 @@
 info:
-  name: "Blog Tag Mapping "
+  name: Advisor Metric Definitions
   type: folder
-  seq: 75
+  seq: 89
 
 request:
   auth: inherit

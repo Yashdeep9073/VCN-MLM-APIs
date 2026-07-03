@@ -1,7 +1,7 @@
 info:
   name: "Blog "
   type: folder
-  seq: 71
+  seq: 76
 
 request:
   auth: inherit

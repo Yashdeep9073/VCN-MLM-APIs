@@ -1,0 +1,30 @@
+info:
+  name: Update Advisor Qualification
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}advisor-qualifications/update/23"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "userId": 15,
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-07-31",
+        "qualified": true,
+        "status": "QUALIFIED",
+        "advisorIncomeDefinitionId": 1,
+        "remarks": "Waiting for admin verification"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

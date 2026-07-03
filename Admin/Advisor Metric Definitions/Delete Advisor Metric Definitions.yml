@@ -1,11 +1,11 @@
 info:
-  name: Single Advisor Qualifications
+  name: Delete Advisor Metric Definitions
   type: http
-  seq: 2
+  seq: 5
 
 http:
-  method: GET
-  url: "{{LOCAL_ADMIN_URL}}advisor-qualifications/read/1"
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}advisor-metric-definitions/delete/soft/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

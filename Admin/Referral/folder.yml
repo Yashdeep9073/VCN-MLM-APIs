@@ -1,7 +1,7 @@
 info:
   name: Referral
   type: folder
-  seq: 67
+  seq: 66
 
 request:
   auth: inherit

@@ -1,0 +1,29 @@
+info:
+  name: Update Advisor Metric Definitions
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}advisor-metric-definitions/update/3"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "code": "PAIR_BV_1_1",
+        "name": "Pair BV ",
+        "description": "Matched left and right team BV",
+        "dataType": "DECIMAL",
+        "unit": "BV",
+        "isActive": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
