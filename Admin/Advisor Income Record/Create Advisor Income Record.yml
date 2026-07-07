@@ -1,0 +1,36 @@
+info:
+  name: Create Advisor Income Record
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}advisor-income-records/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "userId": 1,
+        "definitionId": 2,
+        "qualificationId": 3,
+        "periodStart": "2026-07-01",
+        "periodEnd": "2026-07-31",
+        "totalAmount": 2500.75,
+        "status": "PENDING",
+        "remarks": "Monthly commission generated.",
+        "metadata": {
+          "orders": 15,
+          "salesAmount": 125000,
+          "generatedBy": "system"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

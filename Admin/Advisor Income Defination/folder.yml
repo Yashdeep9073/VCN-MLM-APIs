@@ -1,0 +1,7 @@
+info:
+  name: Advisor Income Defination
+  type: folder
+  seq: 76
+
+request:
+  auth: inherit

@@ -1,0 +1,28 @@
+info:
+  name: Update Senior Advisor Metric Definitions
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}senior-advisor-metric-definitions/update/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Monthly Sales",
+        "description": "Tracks the total monthly sales achieved by an advisor.",
+        "dataType": "DECIMAL",
+        "unit": "INR",
+        "isActive": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

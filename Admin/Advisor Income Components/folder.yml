@@ -1,0 +1,7 @@
+info:
+  name: Advisor Income Components
+  type: folder
+  seq: 75
+
+request:
+  auth: inherit

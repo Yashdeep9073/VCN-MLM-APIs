@@ -1,0 +1,28 @@
+info:
+  name: Update Advisor Income Defination
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}advisor-income-definitions/update/4"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Monthly Performance Bonus",
+        "description": "Bonus based on monthly sales performance.",
+        "periodType": "MONTHLY",
+        "customDays": 30,
+        "isActive": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

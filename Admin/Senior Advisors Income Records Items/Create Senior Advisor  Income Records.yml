@@ -1,0 +1,29 @@
+info:
+  name: Create Senior Advisor  Income Records
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}senior-advisor-income-record-items/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "recordId": 1,
+        "componentId": 2,
+        "walletId": 3,
+        "incomeType": "CASH",
+        "amount": 2500.75,
+        "remarks": "Monthly commission credited."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

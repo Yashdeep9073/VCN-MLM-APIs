@@ -1,0 +1,7 @@
+info:
+  name: Senior Advisors Income Definition
+  type: folder
+  seq: 90
+
+request:
+  auth: inherit

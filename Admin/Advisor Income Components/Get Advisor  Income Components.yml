@@ -1,0 +1,25 @@
+info:
+  name: Get Advisor  Income Components
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}advisor-income-components/read?page=1&limit=1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  params:
+    - name: page
+      value: "1"
+      type: query
+    - name: limit
+      value: "1"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

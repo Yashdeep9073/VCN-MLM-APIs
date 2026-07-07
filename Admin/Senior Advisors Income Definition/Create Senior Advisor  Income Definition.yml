@@ -1,0 +1,29 @@
+info:
+  name: Create Senior Advisor  Income Definition
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}senior-advisor-income-definitions/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Monthly Sales Qualification",
+        "description": "Qualification based on monthly sales target.",
+        "periodType": "MONTHLY",
+        "customDays": null,
+        "priority": 1,
+        "isActive": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

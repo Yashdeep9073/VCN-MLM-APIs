@@ -1,0 +1,31 @@
+info:
+  name: Create Advisor Qualification Rule
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}advisor-qualification-rules/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "definitionId": 3,
+        "metricId": 1,
+        "operator": "GREATER_THAN_EQUAL",
+        "targetValue": 100,
+        "sequence": 1,
+        "isRequired": true,
+        "groupNo": 1,
+        "groupType": "AND"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

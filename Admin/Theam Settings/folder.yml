@@ -1,7 +1,7 @@
 info:
   name: "Theam Settings "
   type: folder
-  seq: 87
+  seq: 100
 
 request:
   auth: inherit
