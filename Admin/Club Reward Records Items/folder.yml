@@ -1,7 +1,7 @@
 info:
-  name: Website Settings
+  name: Club Reward Records Items
   type: folder
-  seq: 105
+  seq: 102
 
 request:
   auth: inherit

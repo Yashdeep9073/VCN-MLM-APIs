@@ -1,7 +1,7 @@
 info:
   name: App Config
   type: folder
-  seq: 101
+  seq: 107
 
 request:
   auth: inherit

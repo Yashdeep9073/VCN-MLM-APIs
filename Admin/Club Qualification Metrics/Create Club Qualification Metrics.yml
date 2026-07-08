@@ -1,11 +1,11 @@
 info:
-  name: Update Club Participant
+  name: Create Club Qualification Metrics
   type: http
   seq: 3
 
 http:
-  method: PATCH
-  url: "{{LOCAL_ADMIN_URL}}club-participants/update/1/status"
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}club-qualification-metrics/create"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
@@ -13,7 +13,9 @@ http:
     type: json
     data: |-
       {
-        "status": "DISQUALIFIED"
+        "qualificationId": 1,
+        "metricId": 1,
+        "value": 1000
       }
   auth: inherit
 

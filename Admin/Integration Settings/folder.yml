@@ -1,7 +1,7 @@
 info:
   name: Integration Settings
   type: folder
-  seq: 98
+  seq: 104
 
 request:
   auth: inherit

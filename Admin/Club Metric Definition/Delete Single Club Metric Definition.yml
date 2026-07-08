@@ -1,20 +1,14 @@
 info:
-  name: Delete Bulk Club Rules
+  name: Delete Single Club Metric Definition
   type: http
-  seq: 6
+  seq: 5
 
 http:
   method: DELETE
-  url: "{{LOCAL_ADMIN_URL}}club-rules/delete/soft/bulk"
+  url: "{{LOCAL_ADMIN_URL}}club-metric-definitions/delete/soft/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
-  body:
-    type: json
-    data: |-
-      {
-        "clubRuleIds":[1]
-      }
   auth: inherit
 
 settings:

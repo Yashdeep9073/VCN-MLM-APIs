@@ -1,0 +1,36 @@
+info:
+  name: Update Club Reward Records
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}club-reward-records/update/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "clubId": 1,
+        "userId": 11,
+        "qualificationId": 1,
+        "rewardDefinitionId": 1,
+        "totalAmount": 2500.75,
+        "status": "PENDING",
+        "remarks": "Qualified for Royal Club reward.",
+        "metadata": {
+          "clubName": "Royal Club 2026",
+          "rewardType": "Performance Bonus",
+          "calculatedBy": "SYSTEM",
+          "calculatedAt": "2026-07-08T10:30:00Z"
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

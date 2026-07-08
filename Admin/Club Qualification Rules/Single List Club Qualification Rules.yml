@@ -1,11 +1,11 @@
 info:
-  name: Delete Single Club Rule
+  name: Single List Club Qualification Rules
   type: http
-  seq: 5
+  seq: 2
 
 http:
-  method: DELETE
-  url: "{{LOCAL_ADMIN_URL}}club-rules/delete/soft/1"
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}club-qualification-rules/read/3"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

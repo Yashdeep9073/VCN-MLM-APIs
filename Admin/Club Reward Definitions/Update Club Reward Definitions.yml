@@ -1,0 +1,29 @@
+info:
+  name: Update Club Reward Definitions
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}club-reward-definitions/update/5"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "clubId": 1,
+        "name": "Royal Club Reward",
+        "priority": 1,
+        "isActive": true,
+        "effectiveFrom": "2026-01-01T00:00:00.000Z",
+        "effectiveTo": "2026-12-31T23:59:59.999Z"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

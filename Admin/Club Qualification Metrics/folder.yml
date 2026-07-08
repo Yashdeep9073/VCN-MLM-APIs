@@ -1,7 +1,7 @@
 info:
-  name: Website Settings
+  name: Club Qualification Metrics
   type: folder
-  seq: 105
+  seq: 99
 
 request:
   auth: inherit

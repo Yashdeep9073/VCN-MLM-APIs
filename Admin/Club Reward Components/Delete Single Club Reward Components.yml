@@ -1,11 +1,11 @@
 info:
-  name: Get Single Club Rule
+  name: Delete Single Club Reward Components
   type: http
-  seq: 2
+  seq: 5
 
 http:
-  method: GET
-  url: "{{LOCAL_ADMIN_URL}}club-rules/read/2"
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}club-reward-components/delete/soft/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

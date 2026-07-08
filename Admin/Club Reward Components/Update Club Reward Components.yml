@@ -1,11 +1,11 @@
 info:
-  name: Update Club Rule
+  name: Update Club Reward Components
   type: http
   seq: 4
 
 http:
   method: PUT
-  url: "{{LOCAL_ADMIN_URL}}club-rules/update/2"
+  url: "{{LOCAL_ADMIN_URL}}club-reward-components/update/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
@@ -13,8 +13,10 @@ http:
     type: json
     data: |-
       {
-        "operator": "GREATER_THAN",
-        "targetValue": 7500
+        "rewardDefinitionId": 1,
+        "walletId": 1,
+        "calculationType": "FIXED",
+        "fixedAmount": 1000
       }
   auth: inherit
 

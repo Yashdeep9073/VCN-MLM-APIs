@@ -5,7 +5,7 @@ info:
 
 http:
   method: PUT
-  url: "{{LOCAL_ADMIN_URL}}clubs/update/1"
+  url: "{{LOCAL_ADMIN_URL}}clubs/update/5"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
@@ -13,22 +13,23 @@ http:
     type: json
     data: |-
       {
-        "name": "Royal Club June 2026",
-        "description": "Users who achieve 5000 BV and sponsor 5 active members during June 2026.",
-        "startDate": "2026-06-01T00:00:00.000Z",
-        "endDate": "2026-06-30T23:59:59.999Z",
-        "clubType": "ROYAL_CLUB",
-        "status": "CANCELLED",
+        "name": "Royal Club Elite",
+        "description": "Updated club for top performers.",
+        "status": "ACTIVE",
         "rules": [
           {
-            "ruleType": "BV",
+            "metricId": 1,
             "operator": "GREATER_THAN_EQUAL",
-            "targetValue": 5000
+            "targetValue": 2000,
+            "sequence": 1,
+            "isRequired": true
           },
           {
-            "ruleType": "DIRECT_SPONSORS",
+            "metricId": 4,
             "operator": "GREATER_THAN_EQUAL",
-            "targetValue": 5
+            "targetValue": 10,
+            "sequence": 2,
+            "isRequired": true
           }
         ]
       }
