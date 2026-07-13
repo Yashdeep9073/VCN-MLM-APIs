@@ -1,7 +1,7 @@
 info:
   name: Deals
   type: folder
-  seq: 63
+  seq: 64
 
 request:
   auth: inherit

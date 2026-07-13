@@ -1,0 +1,7 @@
+info:
+  name: Inventory Batch
+  type: folder
+  seq: 43
+
+request:
+  auth: inherit

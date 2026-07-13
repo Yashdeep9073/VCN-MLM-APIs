@@ -1,7 +1,7 @@
 info:
   name: CMS Page
   type: folder
-  seq: 58
+  seq: 59
 
 request:
   auth: inherit

@@ -1,7 +1,7 @@
 info:
   name: Senior Advisors Metric Definitions
   type: folder
-  seq: 86
+  seq: 87
 
 request:
   auth: inherit

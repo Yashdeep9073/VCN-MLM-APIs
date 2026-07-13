@@ -1,7 +1,7 @@
 info:
   name: All Users List
   type: folder
-  seq: 56
+  seq: 57
 
 request:
   auth: inherit

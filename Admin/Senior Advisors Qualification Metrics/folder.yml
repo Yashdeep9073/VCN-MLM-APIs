@@ -1,7 +1,7 @@
 info:
   name: Senior Advisors Qualification Metrics
   type: folder
-  seq: 88
+  seq: 89
 
 request:
   auth: inherit

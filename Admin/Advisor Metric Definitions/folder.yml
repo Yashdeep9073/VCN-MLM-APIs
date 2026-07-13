@@ -1,7 +1,7 @@
 info:
   name: Advisor Metric Definitions
   type: folder
-  seq: 71
+  seq: 72
 
 request:
   auth: inherit

@@ -1,7 +1,7 @@
 info:
   name: "Blog Tag Mapping "
   type: folder
-  seq: 81
+  seq: 82
 
 request:
   auth: inherit

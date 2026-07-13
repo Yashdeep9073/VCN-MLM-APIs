@@ -1,7 +1,7 @@
 info:
   name: Lead Followups
   type: folder
-  seq: 62
+  seq: 63
 
 request:
   auth: inherit

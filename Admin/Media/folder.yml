@@ -1,7 +1,7 @@
 info:
   name: Media
   type: folder
-  seq: 64
+  seq: 65
 
 request:
   auth: inherit

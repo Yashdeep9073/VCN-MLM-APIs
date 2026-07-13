@@ -1,7 +1,7 @@
 info:
   name: Contact Us
   type: folder
-  seq: 51
+  seq: 52
 
 request:
   auth: inherit
