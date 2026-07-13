@@ -18,7 +18,8 @@ http:
       - name: file
         type: file
         value:
-          - /home/yashdeep/Downloads/Alpha Care-20260609T081529Z-3-001.zip
+          - /home/yashdeep/Downloads/epicalepisodes_vcn-e-commerce_2026-06-30_0711.zip
+        contentType: application/zip
   auth: inherit
 
 settings:
