@@ -1,0 +1,28 @@
+info:
+  name: Create Advisor Income Defination
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}advisor-income-definitions/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Monthly Performance Bonus",
+        "description": "Bonus based on monthly sales performance.",
+        "periodType": "MONTHLY",
+        "customDays": 30,
+        "isActive": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

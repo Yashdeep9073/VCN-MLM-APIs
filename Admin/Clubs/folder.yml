@@ -1,7 +1,7 @@
 info:
   name: Clubs
   type: folder
-  seq: 82
+  seq: 95
 
 request:
   auth: inherit

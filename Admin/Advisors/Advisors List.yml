@@ -5,17 +5,10 @@ info:
 
 http:
   method: GET
-  url: "{{LOCAL_ADMIN_URL}}advisors/read?page=5&limit=2"
+  url: "{{LOCAL_ADMIN_URL}}advisors/read"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
-  params:
-    - name: page
-      value: "5"
-      type: query
-    - name: limit
-      value: "2"
-      type: query
   auth: inherit
 
 settings:

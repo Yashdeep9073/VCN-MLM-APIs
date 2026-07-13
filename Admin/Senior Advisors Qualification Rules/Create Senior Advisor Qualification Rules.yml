@@ -1,0 +1,29 @@
+info:
+  name: Create Senior Advisor Qualification Rules
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}senior-advisor-qualification-rules/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "definitionId": 1,
+        "metricId": 4,
+        "operator": "GREATER_THAN_EQUAL",
+        "targetValue": 10000,
+        "sequence": 1,
+        "isRequired": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

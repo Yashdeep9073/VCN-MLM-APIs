@@ -1,0 +1,7 @@
+info:
+  name: Advisor Qualification Rule
+  type: folder
+  seq: 74
+
+request:
+  auth: inherit

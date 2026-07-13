@@ -1,0 +1,31 @@
+info:
+  name: Update Advisor Qualification Rule
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}advisor-qualification-rules/update/24"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "definitionId": 3,
+        "metricId": 1,
+        "operator": "GREATER_THAN_EQUAL",
+        "targetValue": 100,
+        "sequence": 1,
+        "isRequired": true,
+        "groupNo": 1,
+        "groupType": "AND"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

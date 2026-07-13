@@ -1,7 +1,0 @@
-info:
-  name: Advisor Qualifications
-  type: folder
-  seq: 72
-
-request:
-  auth: inherit

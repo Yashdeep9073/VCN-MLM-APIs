@@ -1,7 +1,7 @@
 info:
   name: Senior Advisor Rules
   type: folder
-  seq: 74
+  seq: 86
 
 request:
   auth: inherit

@@ -1,7 +1,7 @@
 info:
   name: Attribute Values
   type: folder
-  seq: 49
+  seq: 50
 
 request:
   auth: inherit

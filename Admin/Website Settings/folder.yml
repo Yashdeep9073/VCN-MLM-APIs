@@ -1,0 +1,7 @@
+info:
+  name: Website Settings
+  type: folder
+  seq: 106
+
+request:
+  auth: inherit

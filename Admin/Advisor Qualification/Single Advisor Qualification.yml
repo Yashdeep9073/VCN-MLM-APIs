@@ -1,0 +1,18 @@
+info:
+  name: Single Advisor Qualification
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}advisor-qualifications/read/23"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,7 +1,7 @@
 info:
   name: Settings
   type: folder
-  seq: 75
+  seq: 104
 
 request:
   auth: inherit

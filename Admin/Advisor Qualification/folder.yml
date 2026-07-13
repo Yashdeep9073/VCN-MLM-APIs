@@ -1,0 +1,7 @@
+info:
+  name: Advisor Qualification
+  type: folder
+  seq: 73
+
+request:
+  auth: inherit

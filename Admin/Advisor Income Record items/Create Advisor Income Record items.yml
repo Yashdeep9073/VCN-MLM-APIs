@@ -1,0 +1,29 @@
+info:
+  name: Create Advisor Income Record items
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}advisor-income-record-items/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "recordId": 2,
+        "componentId": 2,
+        "walletId": 3,
+        "incomeType": "CASH",
+        "amount": 1500.50,
+        "remarks": "Monthly direct referral commission."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

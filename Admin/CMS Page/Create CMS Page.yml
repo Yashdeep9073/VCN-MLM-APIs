@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{LOCAL_ADMIN_URL}}cms-pages/create"
+  url: "{{SERVER_ADMIN_URL}}cms-pages/create"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

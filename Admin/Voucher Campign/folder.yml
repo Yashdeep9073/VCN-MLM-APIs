@@ -1,7 +1,7 @@
 info:
   name: Voucher Campign
   type: folder
-  seq: 67
+  seq: 68
 
 request:
   auth: inherit

@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{LOCAL_ADMIN_URL}}cms-pages/read?pageType=HOME"
+  url: "{{SERVER_ADMIN_URL}}cms-pages/read?pageType=HOME"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

@@ -1,0 +1,29 @@
+info:
+  name: Create Advisor Metric Definitions
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}advisor-metric-definitions/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "code": "PAIR_BV_1",
+        "name": "Pair BV ",
+        "description": "Matched left and right team BV",
+        "dataType": "DECIMAL",
+        "unit": "BV",
+        "isActive": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

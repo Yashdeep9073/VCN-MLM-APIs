@@ -1,0 +1,29 @@
+info:
+  name: Update Senior Advisor  Income Definition
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}senior-advisor-income-definitions/update/5"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Monthly Sales Qualification",
+        "description": "Qualification based on monthly sales target.",
+        "periodType": "MONTHLY",
+        "customDays": null,
+        "priority": 1,
+        "isActive": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,7 @@
+info:
+  name: Advisor Qualification Metric
+  type: folder
+  seq: 75
+
+request:
+  auth: inherit

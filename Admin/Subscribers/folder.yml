@@ -1,7 +1,7 @@
 info:
   name: Subscribers
   type: folder
-  seq: 52
+  seq: 53
 
 request:
   auth: inherit

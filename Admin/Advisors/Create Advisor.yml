@@ -11,13 +11,24 @@ http:
       value: "{{TOKEN}}"
   body:
     type: json
-    data: |-
-      {
-        "userId": 26,
-        "status": "PENDING",
-        "mentorSeniorAdvisorId": 3,
-        "remarks": "Awaiting review"
+    data: "{
+
+      \  \"userId\": 10
+
+      \  ,
+
+      \  \"status\": \"PENDING\",
+
+      \  \"mentorSeniorAdvisorId\": 3,
+
+      \  \"remarks\": \"Awaiting review\"
+
+
       }
+
+      \ \ 
+
+      \  "
   auth: inherit
 
 settings:

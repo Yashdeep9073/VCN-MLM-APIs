@@ -1,0 +1,7 @@
+info:
+  name: Advisor Income Record items
+  type: folder
+  seq: 79
+
+request:
+  auth: inherit

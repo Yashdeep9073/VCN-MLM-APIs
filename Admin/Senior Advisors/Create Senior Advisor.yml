@@ -13,13 +13,14 @@ http:
     type: json
     data: |-
       {
-        "userId": 15,
-        "remarks": "Promoted by admin",
+        "userId": 10,
+        "status": "PENDING",
         "areaNames": [
-          "Punjab",
-          "Chandigarh",
-          "Haryana"
-        ]
+          "North Zone",
+          "South Zone",
+          "East Zone"
+        ],
+        "remarks": "Initial area assignment."
       }
   auth: inherit
 

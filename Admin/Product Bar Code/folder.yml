@@ -1,7 +1,7 @@
 info:
   name: Product Bar Code
   type: folder
-  seq: 50
+  seq: 51
 
 request:
   auth: inherit

@@ -1,0 +1,30 @@
+info:
+  name: "Update Club Qualification "
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}club-qualifications/update/10"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "clubId": 1,
+        "userId": 11,
+        "periodStart": "2026-01-01T00:00:00.000Z",
+        "periodEnd": "2026-01-31T23:59:59.999Z",
+        "qualified": true,
+        "status": "QUALIFIED",
+        "remarks": "User successfully met all qualification criteria."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

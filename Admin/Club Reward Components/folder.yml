@@ -1,0 +1,7 @@
+info:
+  name: Club Reward Components
+  type: folder
+  seq: 101
+
+request:
+  auth: inherit

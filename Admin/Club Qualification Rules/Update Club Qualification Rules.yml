@@ -1,0 +1,29 @@
+info:
+  name: Update Club Qualification Rules
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}club-qualification-rules/update/10"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "clubId": 1,
+        "metricId": 2,
+        "operator": "GREATER_THAN_EQUAL",
+        "targetValue": 1000,
+        "sequence": 1,
+        "isRequired": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
