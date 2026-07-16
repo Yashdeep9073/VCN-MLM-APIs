@@ -1,7 +1,7 @@
 info:
   name: Blog Comments
   type: folder
-  seq: 84
+  seq: 87
 
 request:
   auth: inherit

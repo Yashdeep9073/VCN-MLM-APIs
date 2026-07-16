@@ -13,10 +13,12 @@ http:
     type: json
     data: |-
       {
-        "name": "first-4d0",
-        "code": "VALUE",
-        "description": "hello kse ho app"
-       
+        "title": "Office Rent - July 2026",
+        "description": "Monthly office rent payment for Chandigarh branch.",
+        "amount": 50000,
+        "expenseDate": "2026-07-13T10:30:00.000Z",
+        "categoryId": 1
+      //   "receiptId": 12
       }
   auth: inherit
 

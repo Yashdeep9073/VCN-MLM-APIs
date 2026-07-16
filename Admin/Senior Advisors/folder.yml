@@ -1,7 +1,7 @@
 info:
   name: Senior Advisors
   type: folder
-  seq: 85
+  seq: 88
 
 request:
   auth: inherit

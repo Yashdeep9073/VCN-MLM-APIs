@@ -1,7 +1,7 @@
 info:
   name: Voucher Redemption
   type: folder
-  seq: 70
+  seq: 74
 
 request:
   auth: inherit

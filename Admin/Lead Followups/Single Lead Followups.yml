@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{LOCAL_ADMIN_URL}}lead-follow-ups/2"
+  url: "{{LOCAL_ADMIN_URL}}lead-follow-ups/read/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

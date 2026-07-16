@@ -1,0 +1,28 @@
+info:
+  name: Create Promotion  Condition
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}promotion-condition/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "promotionId": 1,
+        "minimumQty": 3,
+        "minimumAmount": 1500,
+        "maximumDiscount": 300,
+        "customerType": "CUSTOMER"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

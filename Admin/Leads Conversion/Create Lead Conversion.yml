@@ -1,0 +1,30 @@
+info:
+  name: Create Lead Conversion
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}lead-conversations/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "leadId": 2,
+        "platform": "WHATSAPP",
+        "sender": "CUSTOMER",
+        "message": "Hi, I would like to know more about your premium membership plans.",
+        "mediaUrl": "https://example.com/uploads/brochure.pdf",
+        "messageId": "MSG-20260714-001",
+        "sentAt": "2026-07-14T12:30:00.000Z"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

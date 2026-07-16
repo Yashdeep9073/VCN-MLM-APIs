@@ -1,0 +1,7 @@
+info:
+  name: Promotion Condition
+  type: folder
+  seq: 113
+
+request:
+  auth: inherit

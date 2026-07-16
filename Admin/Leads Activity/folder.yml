@@ -1,0 +1,7 @@
+info:
+  name: Leads Activity
+  type: folder
+  seq: 63
+
+request:
+  auth: inherit

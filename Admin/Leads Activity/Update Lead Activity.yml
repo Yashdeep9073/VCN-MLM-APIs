@@ -1,0 +1,26 @@
+info:
+  name: Update Lead Activity
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}lead-activities/update/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "type": "NOTE",
+        "title": "Follow up with client",
+        "description": "Customer requested a callback regarding pricing and product details."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,31 @@
+info:
+  name: "Create Promotion "
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}promotion/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Summer Sale 2026",
+        "code": "SUMMER2026",
+        "type": "PERCENTAGE",
+        "priority": 1,
+        "isActive": true,
+        "autoApply": true,
+        "startAt": "2026-07-13T00:00:00.000Z",
+        "endAt": "2026-07-31T23:59:59.000Z"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

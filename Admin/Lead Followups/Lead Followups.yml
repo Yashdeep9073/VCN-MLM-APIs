@@ -5,21 +5,21 @@ info:
 
 http:
   method: POST
-  url: "{{LOCAL_ADMIN_URL}}lead-follow-ups"
+  url: "{{LOCAL_ADMIN_URL}}lead-follow-ups/create"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \  \"leadId\": 2,\r
-
-      \  \"note\": \"Called the customer, they are interested in the product\",\r
-
-      \  \"nextFollow\": \"2024-05-25T10:00:00.000Z\"\r
-
-      }"
+    data: |-
+      {
+        "leadId": 2,
+        "type": "CALL",
+        "outcome": "INTERESTED",
+        "note": "Customer showed interest in the premium membership plan and requested a detailed quotation.",
+        "followUpDate": "2026-07-14T10:30:00.000Z",
+        "nextFollowDate": "2026-07-21T10:30:00.000Z"
+      }
   auth: inherit
 
 settings:
