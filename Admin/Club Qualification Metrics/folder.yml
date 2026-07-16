@@ -1,7 +1,7 @@
 info:
   name: Club Qualification Metrics
   type: folder
-  seq: 100
+  seq: 99
 
 request:
   auth: inherit

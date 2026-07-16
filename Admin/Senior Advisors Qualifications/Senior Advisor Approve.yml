@@ -1,11 +1,11 @@
 info:
-  name: Delete Single Senior Advisor Rule
+  name: Senior Advisor Approve
   type: http
   seq: 5
 
 http:
-  method: DELETE
-  url: "{{LOCAL_ADMIN_URL}}senior-advisor-rules/delete/soft/123"
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}senior-advisor-qualifications/approve/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

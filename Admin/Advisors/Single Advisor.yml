@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{LOCAL_ADMIN_URL}}advisors/read/7"
+  url: "{{LOCAL_ADMIN_URL}}advisors/read/2"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

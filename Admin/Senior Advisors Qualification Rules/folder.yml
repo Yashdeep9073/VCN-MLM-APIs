@@ -1,7 +1,7 @@
 info:
   name: Senior Advisors Qualification Rules
   type: folder
-  seq: 90
+  seq: 89
 
 request:
   auth: inherit

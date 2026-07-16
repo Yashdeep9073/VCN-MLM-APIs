@@ -1,7 +1,7 @@
 info:
   name: Club Qualification Rules
   type: folder
-  seq: 98
+  seq: 97
 
 request:
   auth: inherit
