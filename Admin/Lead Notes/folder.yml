@@ -1,0 +1,7 @@
+info:
+  name: Lead Notes
+  type: folder
+  seq: 65
+
+request:
+  auth: inherit

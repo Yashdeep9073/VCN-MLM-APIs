@@ -1,7 +1,7 @@
 info:
   name: Voucher
   type: folder
-  seq: 69
+  seq: 73
 
 request:
   auth: inherit

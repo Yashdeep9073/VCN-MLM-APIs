@@ -5,25 +5,25 @@ info:
 
 http:
   method: PATCH
-  url: "{{LOCAL_ADMIN_URL}}leads/1"
+  url: "{{LOCAL_ADMIN_URL}}leads/update/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \    \"name\": \"demo 2\",\r
-
-      \    \"phone\": \"7869523642\",\r
-
-      \    \"email\": \"demo2@gmail.com\",\r
-
-      \    \"source\": \"ADS\",\r
-
-      \    \"status\": \"CONTACTED\"\r
-
-      }"
+    data: |-
+      {
+        "name": "Rahul Sharma",
+        "phone": "9876543210",
+        "email": "rahul.sharma@gmail.com",
+        "sourceId": 1,
+        "status": "QUALIFIED",
+        "temperature": "HOT",
+        "assignedTo": 1,
+        "score": 85,
+        "lastContactAt": "2026-07-14T10:30:00.000Z",
+        "nextFollowUpAt": "2026-07-20T11:00:00.000Z"
+      }
   auth: inherit
 
 settings:

@@ -1,0 +1,7 @@
+info:
+  name: Lead Sourse
+  type: folder
+  seq: 66
+
+request:
+  auth: inherit

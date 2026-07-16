@@ -1,0 +1,25 @@
+info:
+  name: Create Lead Notes
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}lead-notes/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "leadId": 2,
+        "note": "The customer is interested in the premium membership plan and requested a follow-up call next week."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

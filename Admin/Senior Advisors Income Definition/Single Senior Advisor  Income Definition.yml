@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{LOCAL_ADMIN_URL}}senior-advisor-income-definitions/read/4"
+  url: "{{LOCAL_ADMIN_URL}}senior-advisor-income-definitions/read/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

@@ -1,7 +1,7 @@
 info:
   name: Club Reward Definitions
   type: folder
-  seq: 96
+  seq: 97
 
 request:
   auth: inherit

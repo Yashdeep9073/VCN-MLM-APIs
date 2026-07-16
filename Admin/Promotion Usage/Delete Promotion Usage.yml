@@ -1,0 +1,18 @@
+info:
+  name: Delete Promotion Usage
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}promotion-usage/delete/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,27 @@
+info:
+  name: Create Lead Activity
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}lead-activities/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "leadId": 2,
+        "type": "NOTE",
+        "title": "Follow up with client",
+        "description": "Customer requested a callback regarding pricing and product details."
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

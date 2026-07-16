@@ -1,0 +1,26 @@
+info:
+  name: Update Lead Sourse
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}lead-sources/update/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Facebook Ads",
+        "type": "FACEBOOK",
+        "isActive": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

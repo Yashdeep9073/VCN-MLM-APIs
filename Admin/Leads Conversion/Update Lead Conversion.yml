@@ -1,0 +1,29 @@
+info:
+  name: Update Lead Conversion
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}lead-conversations/update/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "platform": "WHATSAPP",
+        "sender": "CUSTOMER",
+        "message": "Hi, I would like to know more about your premium membership plans.",
+        "mediaUrl": "https://example.com/uploads/brochure.pdf",
+        "messageId": "MSG-20260714-001",
+        "sentAt": "2026-07-14T12:30:00.000Z"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

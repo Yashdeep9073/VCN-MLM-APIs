@@ -1,0 +1,27 @@
+info:
+  name: Create Promotion  Usage
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}promotion-usage/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "promotionId": 1,
+        "customerId": 101,
+        "orderId": 5001,
+        "discount": 250
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

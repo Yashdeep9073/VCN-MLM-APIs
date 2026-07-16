@@ -1,0 +1,7 @@
+info:
+  name: Promotion Rewards
+  type: folder
+  seq: 114
+
+request:
+  auth: inherit

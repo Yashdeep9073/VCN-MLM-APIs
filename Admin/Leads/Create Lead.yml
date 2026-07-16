@@ -5,29 +5,25 @@ info:
 
 http:
   method: POST
-  url: "{{LOCAL_ADMIN_URL}}leads"
+  url: "{{LOCAL_ADMIN_URL}}leads/create"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \            \"id\": 1,\r
-
-      \            \"name\": \"demo lead\",\r
-
-      \            \"phone\": \"6270482540\",\r
-
-      \            \"email\": \"demo@gmail.com\",\r
-
-      \            \"source\": \"FB\",\r
-
-      \            \"status\": \"NEW\",\r
-
-      \            \"assignedTo\": null\r
-
-      }"
+    data: |-
+      {
+        "name": "Rahul Sharma",
+        "phone": "9876543210",
+        "email": "rahul.sharma@gmail.com",
+        "sourceId": 1,
+        "status": "QUALIFIED",
+        "temperature": "HOT",
+        "assignedTo": 1,
+        "score": 85,
+        "lastContactAt": "2026-07-14T10:30:00.000Z",
+        "nextFollowUpAt": "2026-07-20T11:00:00.000Z"
+      }
   auth: inherit
 
 settings:

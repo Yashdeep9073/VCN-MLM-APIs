@@ -1,0 +1,28 @@
+info:
+  name: Update Promotion Rewards
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}promotion-reward/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "id":2,
+        "promotionId": 1,
+        "rewardType": "FREE_PRODUCT",
+        "value": 1,
+        "productId": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

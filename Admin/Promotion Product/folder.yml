@@ -1,0 +1,7 @@
+info:
+  name: Promotion Product
+  type: folder
+  seq: 112
+
+request:
+  auth: inherit

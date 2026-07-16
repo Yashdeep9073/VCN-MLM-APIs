@@ -1,7 +1,7 @@
 info:
   name: Club Metric Definition
   type: folder
-  seq: 97
+  seq: 98
 
 request:
   auth: inherit

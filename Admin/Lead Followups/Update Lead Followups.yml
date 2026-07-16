@@ -5,19 +5,20 @@ info:
 
 http:
   method: PATCH
-  url: "{{LOCAL_ADMIN_URL}}lead-follow-ups/2"
+  url: "{{LOCAL_ADMIN_URL}}lead-follow-ups/update/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \  \"note\": \"Customer confirmed interest, scheduled demo for next week\",\r
-
-      \  \"nextFollow\": \"2024-05-26T14:00:00.000Z\"\r
-
-      }"
+    data: |-
+      {
+        "type": "CALL",
+        "outcome": "INTERESTED",
+        "note": "Customer showed interest in the premium membership plan and requested a detailed quotation.",
+        "followUpDate": "2026-07-14T10:30:00.000Z",
+        "nextFollowDate": "2026-07-21T10:30:00.000Z"
+      }
   auth: inherit
 
 settings:
