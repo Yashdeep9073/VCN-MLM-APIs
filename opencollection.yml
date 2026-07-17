@@ -43,4 +43,4 @@ extensions:
   bruno:
     ignore:
       - node_modules
-      - .git
+      - .git  
