@@ -1,0 +1,26 @@
+info:
+  name: Delete Job Schedule
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{LOCAL_ADMIN_URL}}job-schedules/delete"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+          "cronExpression": "0 0 2 * *",
+          "retryLimit": 5,
+          "timeout": 900000,
+          "priority": 2
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

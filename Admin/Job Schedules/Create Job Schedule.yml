@@ -1,0 +1,36 @@
+info:
+  name: Create Job Schedule
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}job-schedules/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+          "code": "ADVISOR_INCOME_MONTHLY",
+          "name": "Advisor Income Monthly Processor",
+          "jobType": "ADVISOR_INCOME",
+          "cronExpression": "0 0 1 * *",
+          "queueName": "advisor-queue",
+          "priority": 1,
+          "retryLimit": 3,
+          "timeout": 600000,
+          "isEnabled": true,
+          "configuration": {
+            "module": "ADVISOR",
+            "action": "PROCESS_INCOME",
+            "batchSize": 500
+          }
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

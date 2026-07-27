@@ -1,0 +1,26 @@
+info:
+  name: Create Bulk Order
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}orders/create/bulk-upload"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - /home/yashdeep/Downloads/orders_bulk_template.xlsx
+        contentType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

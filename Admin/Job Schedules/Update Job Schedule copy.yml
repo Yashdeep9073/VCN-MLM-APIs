@@ -1,0 +1,26 @@
+info:
+  name: Update Job Schedule copy
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: "{{LOCAL_ADMIN_URL}}job-schedules/update/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+          "cronExpression": "0 0 2 * *",
+          "retryLimit": 5,
+          "timeout": 900000,
+          "priority": 2
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
