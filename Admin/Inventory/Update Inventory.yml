@@ -11,17 +11,13 @@ http:
       value: "{{TOKEN}}"
   body:
     type: json
-    data: "{\r
-
-      \    \"productVariantId\": 1,\r
-
-      \    \"warehouseId\": 1,\r
-
-      \    \"quantity\": 1,\r
-
-      \    \"type\": \"DAMAGE\"\r
-
-      }"
+    data: |-
+      {
+          "productVariantId": 1,
+          "warehouseId": 1,
+          "quantity": 160,
+          "type": "DAMAGE"
+      }
   auth: inherit
 
 settings:

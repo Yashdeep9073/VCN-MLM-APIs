@@ -15,10 +15,10 @@ http:
       {
         "productVariantId": 1,
         "warehouseId": 1,
-        "batchNo": "BATCH-2026-001",
+        "batchNo": "BATCH-2016-001",
         "quantity": 100,
         "costPrice": 499.99,
-        "expiryDate": "2027-12-31T00:00:00.000Z"
+        "expiryDate": "2025-12-31T00:00:00.000Z"
       }
   auth: inherit
 

@@ -14,7 +14,7 @@ http:
     data: |-
       {
         "promotionId": 1,
-        "minimumQty": 3,
+        "minimumQty": 1,
         "minimumAmount": 1500,
         "maximumDiscount": 300,
         "customerType": "CUSTOMER"
