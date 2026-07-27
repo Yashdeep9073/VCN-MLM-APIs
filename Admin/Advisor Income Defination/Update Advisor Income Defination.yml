@@ -5,7 +5,7 @@ info:
 
 http:
   method: PUT
-  url: "{{LOCAL_ADMIN_URL}}advisor-income-definitions/update/4"
+  url: "{{LOCAL_ADMIN_URL}}advisor-income-definitions/update/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

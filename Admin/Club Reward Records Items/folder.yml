@@ -1,7 +1,7 @@
 info:
   name: Club Reward Records Items
   type: folder
-  seq: 103
+  seq: 102
 
 request:
   auth: inherit

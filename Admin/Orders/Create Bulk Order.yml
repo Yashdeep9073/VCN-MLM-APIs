@@ -1,25 +1,22 @@
 info:
-  name: "Create Media Bulk "
+  name: Create Bulk Order
   type: http
-  seq: 5
+  seq: 10
 
 http:
   method: POST
-  url: "{{SERVER_ADMIN_URL}}media/create/bulk-upload"
+  url: "{{LOCAL_ADMIN_URL}}orders/create/bulk-upload"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   body:
     type: multipart-form
     data:
-      - name: folder
-        type: text
-        value: PRODUCT
       - name: file
         type: file
         value:
-          - /home/yashdeep/Downloads/epicalepisodes_vcn-e-commerce_2026-06-30_0711.zip
-        contentType: application/zip
+          - /home/yashdeep/Downloads/orders_bulk_template.xlsx
+        contentType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
   auth: inherit
 
 settings:

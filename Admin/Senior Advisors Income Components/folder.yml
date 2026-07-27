@@ -1,7 +1,11 @@
 info:
   name: Senior Advisors Income Components
   type: folder
+<<<<<<< HEAD
+  seq: 91
+=======
   seq: 93
+>>>>>>> 47f67c255df92a8441c82d8d24d37f4ba285b1b7
 
 request:
   auth: inherit

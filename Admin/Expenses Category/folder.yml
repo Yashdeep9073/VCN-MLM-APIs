@@ -1,7 +1,7 @@
 info:
   name: "Expenses Category "
   type: folder
-  seq: 109
+  seq: 108
 
 request:
   auth: inherit
