@@ -15,9 +15,9 @@ http:
       {
           "code": "ADVISOR_INCOME_MONTHLY",
           "name": "Advisor Income Monthly Processor",
-          "jobType": "ADVISOR_INCOME",
+          "jobType": "CLUB_REWARD",
           "cronExpression": "0 0 1 * *",
-          "queueName": "advisor-queue",
+          "queueName": "advisor-queus",
           "priority": 1,
           "retryLimit": 3,
           "timeout": 600000,

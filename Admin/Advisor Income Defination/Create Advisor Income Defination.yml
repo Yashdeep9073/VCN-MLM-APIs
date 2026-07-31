@@ -13,11 +13,12 @@ http:
     type: json
     data: |-
       {
-        "name": "Monthly Performance Bonus",
-        "description": "Bonus based on monthly sales performance.",
+        "scheduleId": 6,
+        "name": "Monthly Leadership Bonus",
+        "description": "Bonus distributed every month",
         "periodType": "MONTHLY",
-        "customDays": 30,
-        "isActive": true
+        "customDays": null,
+        "requiresQualification": true
       }
   auth: inherit
 
