@@ -5,16 +5,19 @@ info:
 
 http:
   method: POST
-  url: "{{LOCAL_ADMIN_URL}}binary-flush/create"
+  url: "{{LOCAL_ADMIN_URL}}snapshots/create"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   body:
     type: json
     data: |
+      // Request
       {
-        "userName": "Yee2332",
-        "remarks": "User requested BV cleanup"
+          "snapshotType": "BINARY",
+          "filters": {
+              "userId": "1232324323"
+          }
       }
 
 settings:
