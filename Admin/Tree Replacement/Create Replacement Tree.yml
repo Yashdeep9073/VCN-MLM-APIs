@@ -1,0 +1,27 @@
+info:
+  name: Create Replacement Tree
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}tree-replacement/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |2
+        {
+          "userId": 2,
+          "newParentId": 3,
+          "newPosition": "RIGHT",
+          "reason": "MANUAL",
+          "remarks": "Moved under sponsor due to rebalancing request"
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

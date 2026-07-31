@@ -5,10 +5,14 @@ info:
 
 http:
   method: GET
-  url: "{{LOCAL_ADMIN_URL}}all-users/read"
+  url: "{{LOCAL_ADMIN_URL}}all-users/read?search=torrance9390"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
+  params:
+    - name: search
+      value: torrance9390
+      type: query
   auth: inherit
 
 settings:
