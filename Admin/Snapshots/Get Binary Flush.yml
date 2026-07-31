@@ -1,20 +1,23 @@
 info:
-  name: Create Binary Flush
+  name: Get Binary Flush
   type: http
-  seq: 1
+  seq: 2
 
 http:
-  method: POST
-  url: "{{LOCAL_ADMIN_URL}}binary-flush/create"
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}snapshots/read"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   body:
     type: json
     data: |
+      // Request
       {
-        "userName": "Yee2332",
-        "remarks": "User requested BV cleanup"
+          "snapshotType": "BINARY",
+          "filters": {
+              "userId": "1"
+          }
       }
 
 settings:
