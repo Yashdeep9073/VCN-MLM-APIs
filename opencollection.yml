@@ -21,7 +21,7 @@ request:
     - name: SERVER_ADMIN_URL
       value: https://api.mlm.vcarenetwork.in/admin/
     - name: TOKEN
-      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoiU1lTVEVNX0FETUlOIiwidG9rZW5WZXJzaW9uIjoiODBlMmViZjQtN2E3MC00MmEyLTgxZDktZjg2YWFjMmNiYWEzIiwiaWF0IjoxNzg1NDgwMzAyLCJleHAiOjIxMDA4NDAzMDJ9.mzAGAZsAPhgIFL4uCqHdXcNt9ujrmHR_Qh9sK-e7S8Q
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoiU1lTVEVNX0FETUlOIiwidG9rZW5WZXJzaW9uIjoiZTQ1N2U1ZGEtN2E4Yi00ZmZkLTgzY2MtODc1ZTVlYTM0ZmU0IiwiaWF0IjoxNzg1NDc2Mzc2LCJleHAiOjIxMDA4MzYzNzZ9.7EVCdf4-FQytF1campFMDybnsefOVNGjXYDFl6q9SXk
     - name: LOCAL_COMMON_URL
       value: http://localhost:5050/common/
     - name: LOCAL_USER_URL

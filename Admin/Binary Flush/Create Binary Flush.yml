@@ -1,0 +1,24 @@
+info:
+  name: Create Binary Flush
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}binary-flush/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |
+      {
+        "userId": 42,
+        "remarks": "User requested BV cleanup"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

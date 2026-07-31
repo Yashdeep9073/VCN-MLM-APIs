@@ -1,0 +1,7 @@
+info:
+  name: Binary Flush
+  type: folder
+  seq: 120
+
+request:
+  auth: inherit
