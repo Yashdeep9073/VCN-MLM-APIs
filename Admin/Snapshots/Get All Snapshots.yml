@@ -1,11 +1,11 @@
 info:
-  name: Create Binary Flush
+  name: Get All Snapshots
   type: http
-  seq: 1
+  seq: 2
 
 http:
-  method: POST
-  url: "{{LOCAL_ADMIN_URL}}snapshots/create"
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}snapshots/read"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

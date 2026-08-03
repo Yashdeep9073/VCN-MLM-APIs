@@ -17,7 +17,7 @@ config:
 request:
   variables:
     - name: LOCAL_ADMIN_URL
-      value: http://localhost:5050/admin/
+      value: http://127.0.0.1:5050/admin/
     - name: SERVER_ADMIN_URL
       value: https://api.mlm.vcarenetwork.in/admin/
     - name: TOKEN
