@@ -15,7 +15,7 @@ http:
       // Request — Generate from an existing snapshot
       {
           "reportType": "BINARY",
-          "snapshotId": "42",
+          "snapshotId": "2",
           "filters": {
               "format": "XLSX"
           }
