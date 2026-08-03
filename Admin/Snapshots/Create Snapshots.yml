@@ -1,5 +1,5 @@
 info:
-  name: Create Binary Flush
+  name: Create Snapshots
   type: http
   seq: 1
 

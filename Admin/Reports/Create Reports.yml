@@ -1,0 +1,30 @@
+info:
+  name: Create Reports
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}snapshots/"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "reportType": "BINARY",
+        "snapshotId": "689123456789abcdef123456",
+        "filters": {
+          "format": "XLSX",
+          "userId": "689abcdef123456789012345",
+          "fromDate": "2026-08-01",
+          "toDate": "2026-08-31"
+        }
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
