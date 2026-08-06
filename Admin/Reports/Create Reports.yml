@@ -1,27 +1,49 @@
 info:
-  name: Create Reports
+  name: "Create Reports "
   type: http
-  seq: 2
+  seq: 4
 
 http:
   method: POST
-  url: "{{LOCAL_ADMIN_URL}}snapshots/"
+  url: "{{LOCAL_ADMIN_URL}}reports/create"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   body:
     type: json
-    data: |-
+    data: |
+      // Request — Generate from an existing snapshot
       {
-        "reportType": "BINARY",
-        "snapshotId": "689123456789abcdef123456",
-        "filters": {
-          "format": "XLSX",
-          "userId": "689abcdef123456789012345",
-          "fromDate": "2026-08-01",
-          "toDate": "2026-08-31"
-        }
+          "reportType": "BINARY",
+          "snapshotId": "2",
+          "filters": {
+              "format": "XLSX"
+          }
       }
+
+      // // Request — Generate from live data (no snapshot)
+      // {
+      //     "reportType": "INCOME",
+      //     "snapshotId": null,
+      //     "filters": {
+      //         "format": "CSV",
+      //         "fromDate": "2026-07-01",
+      //         "toDate": "2026-07-31"
+      //     }
+      // }
+
+      // // Request — Orders report with date filter
+      // {
+      //     "reportType": "ORDERS",
+      //     "snapshotId": null,
+      //     "filters": {
+      //         "format": "XLSX",
+      //         "userId": "101",
+      //         "fromDate": "2026-01-01",
+      //         "toDate": "2026-07-31"
+      //     }
+      // }
+  auth: inherit
 
 settings:
   encodeUrl: true

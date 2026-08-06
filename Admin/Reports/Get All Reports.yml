@@ -1,21 +1,17 @@
 info:
-  name: Create Binary Flush
+  name: Get All Reports
   type: http
   seq: 1
 
 http:
-  method: POST
-  url: "{{LOCAL_ADMIN_URL}}binary-flush/create"
+  method: GET
+  url: "{{LOCAL_ADMIN_URL}}reports/read"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
   body:
     type: json
-    data: |
-      {
-        "userName": "micah9986",
-        "remarks": "User requested BV cleanup"
-      }
+    data: ""
 
 settings:
   encodeUrl: true

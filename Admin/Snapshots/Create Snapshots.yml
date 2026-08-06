@@ -16,7 +16,7 @@ http:
       {
           "snapshotType": "BINARY",
           "filters": {
-              "userId": "1232324323"
+              "userId": "2"
           }
       }
 
