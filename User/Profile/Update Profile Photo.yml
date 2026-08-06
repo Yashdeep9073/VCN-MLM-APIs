@@ -1,0 +1,26 @@
+info:
+  name: Update Profile Photo
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_USER_URL}}profile/upload"
+  headers:
+    - name: Authorization
+      value: "{{USER_TOKEN}}"
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - C:\Users\Mayankgoyal\Pictures\Screenshots\Screenshot 2025-07-23 210526.png
+        contentType: image/png
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

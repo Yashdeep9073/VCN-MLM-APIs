@@ -1,0 +1,17 @@
+info:
+  name: Approve Profile Images
+  type: http
+  seq: 2
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}profile-images/approve/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

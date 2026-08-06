@@ -1,0 +1,17 @@
+info:
+  name: Reject Profile Images
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}profile-images/reject/1"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

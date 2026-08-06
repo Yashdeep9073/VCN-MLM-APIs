@@ -1,0 +1,7 @@
+info:
+  name: Profile Image
+  type: folder
+  seq: 124
+
+request:
+  auth: inherit
