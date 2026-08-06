@@ -1,0 +1,7 @@
+info:
+  name: Business Center
+  type: folder
+  seq: 125
+
+request:
+  auth: inherit

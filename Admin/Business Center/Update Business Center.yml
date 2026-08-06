@@ -1,0 +1,45 @@
+info:
+  name: Update Business Center
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}business-centre/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "id": 1,
+        "code": "SOH001-UPDATED",
+        "name": "Chandigarh SOH Updated",
+        "level": "SOH",
+        "ownerId": 2,
+        "warehouseId": 2,
+      //   "parentCentreId": 4,
+        "status": "ACTIVE",
+        "addressId": 6,
+        "minimumInvestment": 750000,
+        "pincodes": [
+          "160101",
+          "160102",
+          "160103"
+        ],
+        "logistics": {
+          "deliveryRadius": 20,
+          "minimumOrder": 1000,
+          "deliveryCharge": 50,
+          "sameDayDelivery": true,
+          "pickupAvailable": true
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
