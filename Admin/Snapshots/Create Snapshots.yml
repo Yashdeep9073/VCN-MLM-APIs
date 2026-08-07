@@ -12,13 +12,40 @@ http:
   body:
     type: json
     data: |
-      // Request
       {
-          "snapshotType": "BINARY",
-          "filters": {
-              "userId": "2"
-          }
+        "snapshotType": "BINARY",
+        "snapshotMode": "FULL",
+        "periodType": "MONTHLY",
+        "periodStart": "2026-08-01T00:00:00.000Z",
+        "periodEnd": "2026-08-31T23:59:59.000Z",
+        "businessDate": "2026-08-01T00:00:00.000Z",
+        "periodLabel": "August 2026",
+        "businessEvent": "BINARY_CLOSING",
+        "triggerSource": "COMPENSATION_RUN",
+      //   "compensationRunId": "42",
+      //   "payoutCycleId": "17",
+      //   "binaryClosingId": "5",
+        "description": "Monthly binary snapshot for August compensation",
+        "filters": {
+      //     "userId": "101"
+        }
       }
+
+
+      // {
+      //   "snapshotType": "RANK",
+      //   "snapshotMode": "FULL",
+      //   "periodType": "MONTHLY",
+      //   "periodStart": "2026-08-01T00:00:00.000Z",
+      //   "periodEnd": "2026-08-31T23:59:59.000Z",
+      //   "businessDate": "2026-08-01T00:00:00.000Z",
+      //   "periodLabel": "August 2026",
+      //   "businessEvent": "RANK_PROMOTION_RUN",
+      //   "triggerSource": "RANK_RUN",
+      //   "rankRunId": "3",
+      //   "description": "Monthly rank snapshot for August promotions",
+      //   "filters": {}
+      // }
 
 settings:
   encodeUrl: true

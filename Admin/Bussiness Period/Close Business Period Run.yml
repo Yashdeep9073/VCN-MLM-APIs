@@ -1,0 +1,25 @@
+info:
+  name: Close Business Period Run
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}business-period/update/close-run"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "runId":"2",
+        "skipQueue":false
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

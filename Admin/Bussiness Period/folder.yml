@@ -1,0 +1,7 @@
+info:
+  name: Bussiness Period
+  type: folder
+  seq: 123
+
+request:
+  auth: inherit
