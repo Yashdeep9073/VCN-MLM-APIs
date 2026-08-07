@@ -1,11 +1,7 @@
 info:
   name: Promotion Product
   type: folder
-<<<<<<< HEAD:Admin/Club Qualification Metrics/folder.yml
   seq: 99
-=======
-  seq: 112
->>>>>>> 47f67c255df92a8441c82d8d24d37f4ba285b1b7:Admin/Promotion Product/folder.yml
 
 request:
   auth: inherit

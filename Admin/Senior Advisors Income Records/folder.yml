@@ -1,11 +1,7 @@
 info:
   name: Senior Advisors Income Records
   type: folder
-<<<<<<< HEAD
-  seq: 92
-=======
   seq: 94
->>>>>>> 47f67c255df92a8441c82d8d24d37f4ba285b1b7
 
 request:
   auth: inherit
