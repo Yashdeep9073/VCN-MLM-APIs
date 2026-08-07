@@ -27,7 +27,7 @@ request:
     - name: LOCAL_USER_URL
       value: http://localhost:5050/users/
     - name: USER_TOKEN
-      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIiLCJlbWFpbCI6IkppbGxfQmVkbmFyQHlhaG9vLmNvbSIsIm1lbWJlcnNoaXBUeXBlIjoiUFJFRkVSUkVEX0NVU1RPTUVSIiwiYWNjb3VudFN0YXR1cyI6IkFDVElWRSIsImlzVmVyaWZpZWQiOnRydWUsImlzQ29tcGVuc2F0aW9uQWN0aXZlIjpmYWxzZSwidG9rZW5WZXJzaW9uIjoiMDVhZjZmYzMtZGY3Ny00MTY2LWI3NTQtNDFiNjljNGVhNTcwIiwiaWF0IjoxNzgyMjAzMTAyLCJleHAiOjIwOTc1NjMxMDJ9.vqyJz34fgdGlhBf5Be4R0K15VJc01iZhexRJeFA_L-4
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJlbWFpbCI6InJvb3RAdmNuLmNvbSIsIm1lbWJlcnNoaXBUeXBlIjoiRElSRUNUX1NFTExFUiIsImFjY291bnRTdGF0dXMiOiJBQ1RJVkUiLCJpc1ZlcmlmaWVkIjp0cnVlLCJpc0NvbXBlbnNhdGlvbkFjdGl2ZSI6dHJ1ZSwidG9rZW5WZXJzaW9uIjoiZjMyYzkyM2EtYTM4Yi00NWQ4LTlkOGItNGZkNjA1MWNkODdjIiwiaWF0IjoxNzg1NzU4MDQ0LCJleHAiOjIxMDExMTgwNDR9.vztLIeE9AtGiYinOJn3lX6FP3FaibN9X5H4gqwTNui0
     - name: SERVER_USER_URL
       value: https://api.mlm.vcarenetwork.in/users/
     - name: SERVER_COMMON_URL

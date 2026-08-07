@@ -1,11 +1,11 @@
 info:
-  name: Update Inventory
+  name: Update Business Center Purchases
   type: http
   seq: 4
 
 http:
   method: PATCH
-  url: "{{LOCAL_ADMIN_URL}}inventory/update"
+  url: "{{LOCAL_ADMIN_URL}}business-centre-purchase/update"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
@@ -13,10 +13,8 @@ http:
     type: json
     data: |-
       {
-          "productVariantId": 1,
-          "warehouseId": 1,
-          "quantity": 160,
-          "type": "DAMAGE"
+        "id": 1,
+        "amount": 35000
       }
   auth: inherit
 

@@ -1,7 +1,7 @@
 info:
-  name: Job Executions
+  name: Profile Image
   type: folder
-  seq: 117
+  seq: 124
 
 request:
   auth: inherit

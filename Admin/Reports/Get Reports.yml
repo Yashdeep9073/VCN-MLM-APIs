@@ -1,11 +1,11 @@
 info:
-  name: Get Job Schedules
+  name: Get Reports
   type: http
   seq: 1
 
 http:
   method: GET
-  url: "{{LOCAL_ADMIN_URL}}job-schedules/read"
+  url: "{{SERVER_ADMIN_URL}}reports"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

@@ -1,7 +1,7 @@
 info:
-  name: Job Executions
+  name: Failed Job
   type: folder
-  seq: 117
+  seq: 119
 
 request:
   auth: inherit

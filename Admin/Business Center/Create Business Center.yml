@@ -1,0 +1,44 @@
+info:
+  name: Create Business Center
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}business-centre/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "code": "SOH001",
+        "name": "Chandigarh SOH",
+        "level": "SOH",
+        "ownerId": 1,
+        "warehouseId": 2,
+      //   "parentCentreId": 3,
+        "status": "PENDING",
+        "addressId": 5,
+        "minimumInvestment": 500000,
+        "pincodes": [
+          "160101",
+          "160102",
+          "160103"
+        ],
+        "logistics": {
+          "deliveryRadius": 15,
+          "minimumOrder": 500,
+          "deliveryCharge": 50,
+          "sameDayDelivery": true,
+          "pickupAvailable": true
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

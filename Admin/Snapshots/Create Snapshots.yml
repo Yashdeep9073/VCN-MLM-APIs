@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{LOCAL_ADMIN_URL}}snapshots/create"
+  url: "{{LOCAL_ADMIN_URL}}snapshots/"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"

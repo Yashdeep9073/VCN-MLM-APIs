@@ -1,11 +1,11 @@
 info:
-  name: Create Promotion  Condition
+  name: Create Business Center Purchases
   type: http
   seq: 3
 
 http:
   method: POST
-  url: "{{LOCAL_ADMIN_URL}}promotion-condition/create"
+  url: "{{LOCAL_ADMIN_URL}}business-centre-purchase/create"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
@@ -13,11 +13,11 @@ http:
     type: json
     data: |-
       {
-        "promotionId": 1,
-        "minimumQty": 1,
-        "minimumAmount": 1500,
-        "maximumDiscount": 300,
-        "customerType": "CUSTOMER"
+        "userId": 1,
+        "businessCentreId": 1,
+        "amount": 25000,
+        "status": "DRAFT",
+        "purchaseDate": "2026-08-06T10:30:00.000Z"
       }
   auth: inherit
 

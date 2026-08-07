@@ -14,11 +14,15 @@ http:
     data: |-
       {
         "clubId": 1,
-        "name": "Royal Club Reward",
+        "scheduleId": 3,
+        "name": "Silver Club Bonus",
+        "description": "Monthly bonus for Silver Club members",
+        "periodType": "MONTHLY",
+        "customDays": null,
         "priority": 1,
-        "isActive": true,
-        "effectiveFrom": "2026-01-01T00:00:00.000Z",
-        "effectiveTo": "2026-12-31T23:59:59.999Z"
+        "effectiveFrom": "2026-07-01T00:00:00.000Z",
+        "effectiveTo": null,
+        "requiresQualification": true
       }
   auth: inherit
 

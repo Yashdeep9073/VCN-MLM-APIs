@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{LOCAL_ADMIN_URL}}inventory/transactions"
+  url: "{{LOCAL_ADMIN_URL}}inventory/transactions/1"
   headers:
     - name: Authorization
       value: "{{TOKEN}}"
