@@ -1,0 +1,45 @@
+info:
+  name: Create Course Questions
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}lms/questions/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "quizId": 1,
+        "question": "Which language is primarily used for web development?",
+        "type": "MULTIPLE_CHOICE",
+        "marks": 5,
+        "options": [
+          {
+            "optionText": "JavaScript",
+            "isCorrect": true
+          },
+          {
+            "optionText": "Python",
+            "isCorrect": false
+          },
+          {
+            "optionText": "C++",
+            "isCorrect": false
+          },
+          {
+            "optionText": "Java",
+            "isCorrect": false
+          }
+        ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

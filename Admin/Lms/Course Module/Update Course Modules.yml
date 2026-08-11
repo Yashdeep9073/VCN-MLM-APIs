@@ -1,0 +1,27 @@
+info:
+  name: Update Course Modules
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}lms/course-modules/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "id": 1,
+        "courseId": 1,
+        "title": "Advanced JavaScript Concepts",
+        "sortOrder": 2
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

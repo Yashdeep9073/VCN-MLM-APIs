@@ -1,0 +1,27 @@
+info:
+  name: Update Course Questions
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}lms/questions/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "id": 1,
+        "question": "Which language is primarily used for web development?",
+        "type": "MULTIPLE_CHOICE",
+        "marks": 5
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

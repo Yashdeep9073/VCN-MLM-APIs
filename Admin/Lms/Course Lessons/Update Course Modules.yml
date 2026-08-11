@@ -1,0 +1,39 @@
+info:
+  name: Update Course Modules
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}lms/lessons/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "id": 1,
+        "moduleId": 1,
+        "title": "Advanced JavaScript Concepts",
+        "type": "LECTURE",
+        "duration": 60,
+        "content": {
+          "text": "Updated lesson content",
+          "sections": [
+            "Variables",
+            "Functions",
+            "Objects"
+          ]
+        },
+        "videoUrl": "https://example.com/videos/advanced-javascript.mp4",
+        "attachmentUrl": "https://example.com/files/javascript-notes.pdf",
+        "sortOrder": 2
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

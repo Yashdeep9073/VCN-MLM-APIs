@@ -1,0 +1,28 @@
+info:
+  name: Create Course  Enrollments
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}lms/enrollments/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "courseId": 1,
+        "userId": 10,
+        "status": "PAID",
+        "completedAt": "2026-08-11T10:30:00.000Z",
+        "certificateIssued": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

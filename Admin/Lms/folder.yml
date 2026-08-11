@@ -1,0 +1,7 @@
+info:
+  name: Lms
+  type: folder
+  seq: 127
+
+request:
+  auth: inherit

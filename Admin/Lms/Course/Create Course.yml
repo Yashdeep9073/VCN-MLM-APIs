@@ -1,0 +1,32 @@
+info:
+  name: "Create Course "
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{LOCAL_ADMIN_URL}}lms/courses/create"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "categoryId": 1,
+        "title": "Full Stack Web Development",
+        "description": "Learn frontend and backend development from beginner to advanced level.",
+        "thumbnail": "https://example.com/images/full-stack-course.jpg",
+        "duration": 120,
+        "level": "BEGINNER",
+        "language": "English",
+        "isPublished": true
+      //   "createdBy": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

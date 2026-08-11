@@ -1,0 +1,32 @@
+info:
+  name: Update Course Quizzes
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{LOCAL_ADMIN_URL}}lms/quizzes/update"
+  headers:
+    - name: Authorization
+      value: "{{TOKEN}}"
+  body:
+    type: json
+    data: |
+      {
+        "id": 1,
+        "categoryId": 1,
+        "title": "Advanced Full Stack Development",
+        "description": "Complete full stack development course with advanced concepts.",
+        "thumbnail": "https://example.com/images/course.jpg",
+        "duration": 120,
+        "level": "ADVANCED",
+        "language": "English",
+        "isPublished": true
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
