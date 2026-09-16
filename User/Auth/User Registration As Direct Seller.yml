@@ -1,0 +1,71 @@
+info:
+  name: User Registration As Direct Seller
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{LOCAL_USER_URL}}auth/register"
+  body:
+    type: json
+    data: |-
+      {
+        "userName": "john2026",
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john@example.com",
+        "phone": "9876543210",
+        "password": "Password@123",
+        "confirmPassword": "Password@123",
+
+        "desiredMembershipType": "DIRECT_SELLER",
+        "placementPreference": "LEFT",
+
+      //   "sponsorUsername": "",
+
+        "termsAccepted": true,
+        "title": "MR",
+        "middleName": "Michael",
+        "parentSpouseTitle": "S_O",
+        "parentSpouseName": "Robert Doe",
+        "gender": "MALE",
+        "dateOfBirth": "1995-05-20",
+        "maritalStatus": "SINGLE",
+        "profession": "BUSINESS",
+
+        "addressLine1": "123 Main Street",
+        "addressLine2": "Near Market",
+        "landmark": "City Mall",
+        "city": "Rohtak",
+        "district": "Rohtak",
+        "state": "Haryana",
+        "pincode": "124001",
+        "postOffice": "Rohtak",
+
+        "companyName": "John Enterprises",
+        "companyType": "PROPRIETORSHIP",
+        "gstNumber": "06ABCDE1234F1Z5",
+
+        "nomineeName": "Robert Doe",
+        "nomineeRelation": "FATHER",
+        "nomineeDateOfBirth": "1965-03-10",
+        
+        "kycDocumentType": "AADHAAR",
+        "kycDocumentNumber": "XXXXXX1234",
+        "kycDigilockerUri": "https://example.com/digilocker/reference/12345",
+        "kycIssuer": "UIDAI",
+        
+        "bankAccountHolderName": "John Doe",
+        "bankName": "State Bank of India",
+        "bankAccountNumber": "123456789012",
+        "bankIfscCode": "SBIN0001234",
+        "bankUpiId": "john@upi"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

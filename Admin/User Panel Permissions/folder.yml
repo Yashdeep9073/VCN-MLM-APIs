@@ -1,0 +1,7 @@
+info:
+  name: User Panel Permissions
+  type: folder
+  seq: 129
+
+request:
+  auth: inherit

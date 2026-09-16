@@ -1,0 +1,7 @@
+info:
+  name: Loyalty Points
+  type: folder
+  seq: 128
+
+request:
+  auth: inherit
